@@ -14,19 +14,22 @@ Esta herramienta sigue las recomendaciones de un sistea de compensación por lo 
 
 ## Diseño de las letras.
 
-Para continuar, se creó un boceto en *Autodesk Inventor* con los nombres de los integrantes del grupo, separados como se solicitó, y se realizó su extrusión con 100 mm de profundidad. Para permitir un acercamiento con el manipulador y poder crear su trayectoria, se importó la geometria a RobotStudio y se unió a una plataforma en un ángulo de 30°.
+Para continuar, se creó un boceto en *Autodesk Inventor* con los nombres de los integrantes del grupo, separados como se solicitó, y se realizó su extrusión con 100 mm de profundidad. Para permitir un acercamiento con el manipulador y poder crear su trayectoria, se importó la geometria a RobotStudio y se unió a una plataforma en un ángulo de 30° sobre la cual se posicionó un cilindro que simulará la posición del pastel con un diámetro de 25 cm puesto que se proyecta para 25 personas.
 ![Letras Nombres](Multimedia/Nombres.jpeg)
-![Superficie de Trabajo](Multimedia/Superficie.jpg)
+![Superficie de Trabajo](Multimedia/Superficie.png)
 
-## Utilización del sensor inductivo de posicionamiento.
-
-Implementación de un sensor, ubicado entre el flanche de montaje y la herramienta que detecta la distancia de la superficie sobre la que se trabaja, para evitar colisiones.
-
-Así, la escena total en RobotStudio incluyendo el manipulador, el controlador, la herramienta o efector final, superficie de trabajo y las letras a recorrer.
+Así, la escena total en RobotStudio incluyendo el manipulador, el controlador virtual, la herramienta o efector final, superficie de trabajo (pastel), mesa y las letras a recorrer se observan en la siguiente imagen.
+![Estación de Trabajo](Multimedia/Station.png)
+Para esto, la base del manipulador se encuentra en las coordenadas (-269.17,-419.57,0), la mesa de trabajo se encuentra en la posición (230.25,-345.35,0) y su orientación se describe por medio de cuaterniones de la forma (0.7071,0,0,-0.7071) y las letras cuentan con una posición de (355.25,-391.38,230.95) y la orientación descrita por cuaterniones es (0.6830,0.1830,-0.1830,-0.6830).
 
 ## Diseño de las trayectorias.
 
-Una vez todos los elementos necesarios se encontraban en la escena de RobotStudio, se inició a programar usando *RAPID* las trayectorias y los movimientos del manipulador para cubrir los puntos esperados. Para optimizar el código, considerando las letras repetidas, se crearon diversos WorkObjects para las letras, por lo que las trayectorias son subrutinas que se pueden replicar más adelante.
+Una vez todos los elementos necesarios se encontraban en la escena de RobotStudio, se inició a programar los diferentes puntos objetivo o targets de las letras por medio de la creación de targets por tabla.
+![Targets creados](Targets.png)
+
+En donde se observa
+
+*RAPID* las trayectorias y los movimientos del manipulador para cubrir los puntos esperados. Para optimizar el código, considerando las letras repetidas, se crearon diversos WorkObjects para las letras, por lo que las trayectorias son subrutinas que se pueden replicar más adelante.
 
 ## Resultados.
 
