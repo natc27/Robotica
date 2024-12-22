@@ -51,7 +51,7 @@ Por último, el funcionamiento se divide en las dos formas de trabajo que se esp
 ### En el plano a 0°.
 Para este caso, se puede observar inicialmente el comportamiento del manipulador en el espacio siguiendo las dos secuencias de movimiento descritas anteriormente.
 
-![Movimiento del manipulador en el espacio considerando un plano a 0°](https://drive.google.com/drive/folders/1M6V57mzbr8BN2OFxW4aCnVonpXYk-7Yh)
+https://drive.google.com/drive/folders/1M6V57mzbr8BN2OFxW4aCnVonpXYk-7Yh
 
 Y su comportamiento en detalle al momento de realizar la trayectoria de decoración sobre el pastel.
 
