@@ -51,7 +51,7 @@ Por último, el funcionamiento se divide en las dos formas de trabajo que se esp
 ### En el plano a 0°.
 Para este caso, se puede observar inicialmente el comportamiento del manipulador en el espacio siguiendo las dos secuencias de movimiento descritas anteriormente.
 
-https://drive.google.com/drive/folders/1M6V57mzbr8BN2OFxW4aCnVonpXYk-7Yh
+https://github.com/natc27/Robotica/blob/main/Lab_1/Multimedia/Movimiento-Plano.mp4
 
 Y su comportamiento en detalle al momento de realizar la trayectoria de decoración sobre el pastel.
 
@@ -64,7 +64,7 @@ Una vez la orientación del plano de trabajo cambia, se adaptan los valores de l
 
 Y el detalle de movimientos sobre el pastel al describir la trayectoria de decoración.
 
-![Movimiento del manipulador al decorar en un plano a 0°](https://drive.google.com/drive/folders/1M6V57mzbr8BN2OFxW4aCnVonpXYk-7Yh)
+![Movimiento del manipulador al decorar en un plano a 0°](https://github.com/natc27/Robotica/blob/main/Lab_1/Multimedia/Movimiento-Plano.mp4)
 
 
 En todos los casos anteriores es posible visualizar en detalle el comportamiento esperado del manipulador cumpliendo con las condiciones impuestas sobre su desempeño y con resultados exitosos, además de la implementación correcta del módulo de entradas y salidas, que le permite al robot una interacción con el operario de manera inmediata y brinda control sobre las acciones del manipulador para asgurar los entornos de seguridad que requiere la aplicación.
