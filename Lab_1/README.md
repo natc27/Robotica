@@ -43,6 +43,7 @@ Posteriormente, en el módulo de *RAPID* se revisaron y codificaron las trayecto
 Por medio de estas herramientas fue posible crear la secuencia de movimientos definida en dos partes en función de las entradas digitales externas, la implementación del módulo de entradas y salidas (I/O) permite introducir en el programa un factor de interaacción Hombre-Máquina con el operario, lo que a su vez proporciona control y seguridad sobre las condiciones externas y físicas propias del entorno en el cual está trabajando el robot. La primera secuencia es activada por la señal "EntDI_1" que habilita el recorrido de la trayectoria de decoración, la cual incluye el carácter decorativo y las letras que conforman los nombres de los operarios; la segunda, por otra parte, se activa con la señal "EntDI_2" y activa una posición de mantenimiento que permite al operario remover y colocar la herramienta de trabajo.
 
 Una vez descrito el funcionamiento del robot, es posible sintetizar sus acciones e instrucciones por medio de un diagrama de flujo como el siguiente:
+![Diagrama de flujo](Multimedia/FlujoLab_1.png)
 
 ## Resultados.
 
