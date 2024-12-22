@@ -27,29 +27,16 @@ Para esto, la base del manipulador se encuentra en las coordenadas (-269.17,-419
 Una vez todos los elementos necesarios se encontraban en la escena de RobotStudio, se inició a programar los diferentes puntos objetivo o targets de las letras por medio de la creación de targets por tabla.
 ![Targets creados](Targets.png)
 
-En donde se observa la alineación y una rotación de 180° alrededor del eje Y con respecto al sistema coordenado del workobject ##Pastel##.
-![Trayectoria de los nombres](Multimedia/Trayectoria_nombres.png)
-![Trayectoria de los nombres y la decoración](Multimedia/Trayectoria_todo.png)
+En donde se observa
 
-Luego, se modificó y codificó en *RAPID*, donde se pueden observar las trayectorias y los movimientos del manipulador para cubrir los puntos esperados. El código se encuentra en una sola trayectoria para todo el nombre con el propósito de mantener las configuraciones coherentes y alcanzables entre sí, sin mebargo la decoración se creó en una trayectoria o path diferente con el propósito de que pueda ser replicable.
-Finalmente, utilizando el código en RAPID se incluyeron dos entrada externas, que se accionan con el mando de control físico del robot, una envía el manipulador a una posición para lograr el mantenimiento (colocación y remoción de la herramienta sobre el flanche de motanje) y otra que desarrolla la trayectoria de decoración.
-Para estas acciones, en el lenguaje *RAPID* fue elemental utilizar algunas funciones como:
-+ MoveL: Controla el movimiento lineal del punto TCP del efector final a un punto establecido o deseado. Establece parámetros de movimiento como punto final, velocidad, zona de acercamiento, objeto de herramienta y objeto de trabajo.
-+ MoveC: Crea un movimiento circular por medio de una instrucción de dos puntos, el punto final del arco y un punto por el cual debe pasar la trayectoria, considerando el punto en donde se encuentra anterior a esta instrucción como el punto de inicio del arco. Establece parámetros de movimiento como punto final, velocidad, zona de acercamiento, objeto de herramienta y objeto de trabajo.
-+ WaitDI: Crea un tiempo de "espera" hasta que es disparado por un flanco (que puede ser positivo o negativo) en una señal de entrada digital.
-
-Finalmente, el flujo de acciones que describe el código implementados y las operaciones descritas por el manipulador se puede ver sintetizado en el siguiente diagrama de flujo.
-![Diagrama de flujo manipulador]()
+*RAPID* las trayectorias y los movimientos del manipulador para cubrir los puntos esperados. Para optimizar el código, considerando las letras repetidas, se crearon diversos WorkObjects para las letras, por lo que las trayectorias son subrutinas que se pueden replicar más adelante.
 
 ## Resultados.
 
-Finalmente, el funcionamiento de la rutina de trabajo sobre un plano de 30° en el robot simulado con RobotStudio se puede observar en el siguiente video.
-![Video movimiento en plano 30°](Multimedia/Movimiento-inclinado.mp4)
-En donde se observa un comportamiento dependiente de las entradas externas como se espera, además a modo de detalle en el siguiente video se puede observar el funcionamientode la trayectoria de los nombres y un caracter de decoración que en este caso es una estrella.
-![Video decoración y nombres en plano 30°](Multimedia/Nombres-inclinado.mp4)
-Y su implementación en un espacio de trabajo plano se puede observar el mismo movimiento dependiente de las entradas digitales controladas desde el simulador.
-![Video movimiento en plano 0°](Multimedia/Movimiento-Plano.mp4)
-Con el detalle de la visualización de las trayectorias de decoración en el siguiente archivo.
-![Video decoración y nombres en plano 0°](Multimedia/Nombres_plano.mp4)
+Finalmente, el funcionamiento de la rutina de trabajo en el robot simulado con RobotStudio se puede observar en el siguiente video.
+Y su implementación en el manipulador real se puede observar en el siguiente video, en donde se evidencia un comportamiento muy cercano y que cumple con los requerimientos de desempeño esperados.
+
+## Entregables.
+El flujo de acciones del robot se puede observar...
 
 En todos los casos anteriores es posible visualizar en detalle el comportamiento esperado del manipulador cumpliendo con las condiciones impuestas sobre su desempeño y con resultados exitosos, además de la implementación correcta del módulo de entradas y salidas, que le permite al robot una interacción con el operario de manera inmediata y brinda control sobre las acciones del manipulador para asgurar los entornos de seguridad que requiere la aplicación.
