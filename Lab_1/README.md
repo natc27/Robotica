@@ -60,7 +60,7 @@ Y su comportamiento en detalle al momento de realizar la trayectoria de decoraci
 ### En el plano a 30°.
 Una vez la orientación del plano de trabajo cambia, se adaptan los valores de las trayectorias puesto que están definidos en función del WorkObject y así su replicación requiere únicamente la redefinición del objeto de trabajo. De la misma manera, inicialmente se observa el comportamiento en el espacio siguiendo las dos secuencias en función de las entradas digitales.
 
-![Movimiento del manipulador en el espacio considerando un plano a 30°](https://drive.google.com/drive/folders/1M6V57mzbr8BN2OFxW4aCnVonpXYk-7Yh)
+![Movimiento del manipulador en el espacio considerando un plano a 30°](./Multimedia/Movimiento-inclinado.mp4)
 
 Y el detalle de movimientos sobre el pastel al describir la trayectoria de decoración.
 
