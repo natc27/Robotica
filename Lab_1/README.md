@@ -52,20 +52,19 @@ Por último, el funcionamiento se divide en las dos formas de trabajo que se esp
 ### En el plano a 0°.
 Para este caso, se puede observar inicialmente el comportamiento del manipulador en el espacio siguiendo las dos secuencias de movimiento descritas anteriormente.
 
-https://github.com/natc27/Robotica/blob/main/Lab_1/Multimedia/Movimiento-Plano.mp4
+https://github.com/user-attachments/assets/4d597bde-e2fe-4958-b373-1807d26bde77
 
 Y su comportamiento en detalle al momento de realizar la trayectoria de decoración sobre el pastel.
 
-![Movimiento del manipulador al decorar en un plano a 0°](https://drive.google.com/drive/folders/1M6V57mzbr8BN2OFxW4aCnVonpXYk-7Yh)
+https://github.com/user-attachments/assets/7216def0-86f1-4bd1-ab2a-55cb37613b50
 
 ### En el plano a 30°.
 Una vez la orientación del plano de trabajo cambia, se adaptan los valores de las trayectorias puesto que están definidos en función del WorkObject y así su replicación requiere únicamente la redefinición del objeto de trabajo. De la misma manera, inicialmente se observa el comportamiento en el espacio siguiendo las dos secuencias en función de las entradas digitales.
 
-![Movimiento del manipulador en el espacio considerando un plano a 30°](./Multimedia/Movimiento-inclinado.mp4)
+https://github.com/user-attachments/assets/8b654ec7-8f6f-4583-95c6-89b74f043ec5
 
 Y el detalle de movimientos sobre el pastel al describir la trayectoria de decoración.
 
-![Movimiento del manipulador al decorar en un plano a 0°](https://github.com/natc27/Robotica/blob/main/Lab_1/Multimedia/Movimiento-Plano.mp4)
-
+https://github.com/user-attachments/assets/ae2eba56-edf3-46a6-8fff-86f631ca3919
 
 En todos los casos anteriores es posible visualizar en detalle el comportamiento esperado del manipulador cumpliendo con las condiciones impuestas sobre su desempeño y con resultados exitosos, además de la implementación correcta del módulo de entradas y salidas, que le permite al robot una interacción con el operario de manera inmediata y brinda control sobre las acciones del manipulador para asgurar los entornos de seguridad que requiere la aplicación.
