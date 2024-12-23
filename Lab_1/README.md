@@ -10,7 +10,9 @@ Grupo conformado por:\
 En el software *Autodesk Inventor* se diseñó el modelo 3D de la herramienta que sostendría el marcador, para lo cual se inició tomando las medidas de un marcador borrable Pelikan genérico y creando la herramienta manteniendo los ejes de la base coincidentes con los ejes del flanche de montaje en RobotStudio, lo que permitió una simplificación en la unión entre los dos.\
 ![Herramienta Diseñada en Inventor](Multimedia/Herramienta.jpeg)
 
-Esta herramienta sigue las recomendaciones de un sistea de compensación por lo que se creó en dos piezas roscadas entre sí. Una base que sostendría el marcador y una tapa que contiene un sistema de resorte y un segundo fondo que permita que el marcador se ajuste a la posición y fuerza que ejerce el robot en cada momento.
+Esta herramienta sigue las recomendaciones de un sistea de compensación por lo que se creó en dos piezas roscadas entre sí. Una base que sostendría el marcador y una tapa que contiene un sistema de resorte que permite que el marcador se ajuste a la posición y fuerza que ejerce el robot en cada momento. Finalmente, el montaje de la herramienta en el flanche de montaje de los manipuladores IRB 140 de ABB ubicados en el Laboratorio de Sistemas Inteligentes Robotizados (LabSIR) de la Uiversidad Nacional de Colombia, sede Bogotá se observa en la siguinete imagen.
+
+![Montaje de la HErramienta sobre el manipulador](Multimedia/Herramienta_ABB.jpg)
 
 ## Diseño de las letras.
 
