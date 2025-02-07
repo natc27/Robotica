@@ -54,6 +54,48 @@ En la interfaz manual HMI, teach pendant, se encuentran 6 teclas a la izquierda 
 ![Teclas de movimiento manual](Multimedia/TP.png)
 
 Para realizar el cambio entre el movimiento linear y articular, se utiliza la tecla *MOTION TYPE* en el teach pendant y en la pantalla se observ el tipo de movimiento que se encuentra seleccionado.
+## Aplicaciones principales de RoboDK
+
+RoboDK es una herramienta poderosa y versátil con aplicaciones en diversos campos de la industria:
+
+* **Simulación y programación offline**: Permite crear programas de robot en un entorno virtual, sin necesidad de detener la producción. Esto ahorra tiempo y costos, además de minimizar el riesgo de errores y colisiones.
+* **Optimización de trayectorias**: RoboDK ofrece herramientas para optimizar las trayectorias del robot, lo que se traduce en movimientos más eficientes, ciclos de trabajo más cortos y mejor calidad en el acabado de las piezas.
+* **Análisis de factibilidad**: Permite evaluar la viabilidad de un proyecto robótico antes de la implementación real. Se pueden simular diferentes escenarios y configuraciones para determinar la mejor solución.
+* **Generación de código para múltiples robots**: RoboDK es compatible con una amplia gama de marcas y modelos de robots, lo que facilita la programación y el control de diferentes sistemas robóticos con un solo software.
+* **Calibración de robots**: Ayuda a mejorar la precisión de los robots industriales mediante procesos de calibración.
+
+## Comunicación con el manipulador
+
+RoboDK se comunica con el manipulador Motoman MH6 a través de una conexión TCP/IP. El software genera un programa en el lenguaje de programación del robot (en este caso, probablemente INFORM II para Motoman) y lo transmite al controlador del robot. El controlador interpreta las instrucciones y las ejecuta, moviendo el robot según lo programado.
+
+## ¿Qué hace RoboDK para mover el manipulador?
+
+RoboDK no "mueve" directamente el manipulador. Su función principal es generar el programa que el robot ejecutará. RoboDK:
+
+1. **Crea el modelo virtual del robot y la celda de trabajo**: Define la geometría del robot, sus límites de movimiento y la disposición de los objetos en el entorno de trabajo.
+2. **Permite crear trayectorias y operaciones**: El usuario define los movimientos que debe realizar el robot, ya sea manualmente o importando modelos CAD y generando trayectorias automáticamente.
+3. **Simula la ejecución del programa**: RoboDK permite visualizar la simulación de los movimientos del robot para detectar posibles errores o colisiones.
+4. **Genera el código de programa**: Traduce las trayectorias y operaciones definidas en un programa en el lenguaje de programación del robot.
+5. **Transfiere el programa al controlador**: El programa generado se carga en el controlador del robot, que se encarga de ejecutar las instrucciones y controlar los movimientos del manipulador.
+
+## Diferencias entre RoboDK y RobotStudio
+
+Tanto RoboDK como RobotStudio son softwares de simulación y programación offline de robots industriales, pero tienen algunas diferencias:
+
+* **RobotStudio**: Es el software propietario de ABB para la simulación y programación de sus robots. Ofrece una integración más profunda con los robots ABB y funciones específicas para ellos.
+* **RoboDK**: Es un software independiente que admite múltiples marcas de robots, incluyendo ABB y Yaskawa. Es más versátil en cuanto a la compatibilidad con diferentes robots.
+
+**Usos específicos:**
+
+* **RobotStudio**: Ideal para usuarios que trabajan exclusivamente con robots ABB y necesitan funciones avanzadas específicas para esos robots.
+* **RoboDK**: Adecuado para usuarios que trabajan con robots de diferentes marcas o necesitan un software más flexible y compatible con una amplia gama de robots.
+
+**Significado personal:**
+
+Ambas herramientas son valiosas en la industria de la robótica. RobotStudio representa la potencia y la especialización de un software propietario, mientras que RoboDK destaca por su versatilidad y capacidad de adaptación a diferentes sistemas robóticos. La elección entre ambos dependerá de las necesidades específicas de cada usuario y del tipo de robots con los que trabaje.
+
+## Programación de una trayectoria polar
+
 
 
 ## Configuraciones de Velocidad.
@@ -64,7 +106,7 @@ En la pantalla del Teach Pendant, en la barra superior se encuentra una gráfica
 ![Nivel de velocidad](Multimedia/Speed.jpg)
 
 
-## RoboDK.
+
 
 ## Referencias.
 + [Documento con las especificaciones técnicas del Manipulador Motoman MH6.](https://pdf.directindustry.com/pdf/motoman/motoman-mh6-series-robots/14474-97220-_2.html)
