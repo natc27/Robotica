@@ -127,7 +127,7 @@ Tanto RoboDK como RobotStudio son herramientas de simulación y programación of
 
 # Programación Trayectoria de Lemniscata en Motoman H6 con RoboDK  
 
-Este repositorio contiene un script en Python para programar un robot **Motoman H6** en **RoboDK**, generando una trayectoria en forma de **lemniscata** llamado [Ver script.py](Lemnistica.py)
+Este repositorio contiene un script en Python para programar un robot **Motoman H6** en **RoboDK**, generando una trayectoria en forma de **lemniscata** llamado [Ver Lemniscata.py](Lemniscata.py)
 
 
 ##  Características  
@@ -149,7 +149,8 @@ Este repositorio contiene un script en Python para programar un robot **Motoman 
 - Controlador **DX100/DX200/YRC1000** para implementación física.  
 
 ---
-
+## Video de simulacion: 
+[Ver simulacion](2025-02-07-20-19-32.mp4)
 
 ## Referencias.
 + [Documento con las especificaciones técnicas del Manipulador Motoman MH6.](https://pdf.directindustry.com/pdf/motoman/motoman-mh6-series-robots/14474-97220-_2.html)
