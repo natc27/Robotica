@@ -80,23 +80,65 @@ RoboDK no "mueve" directamente el manipulador. Su función principal es generar 
 
 ## Diferencias entre RoboDK y RobotStudio
 
-Tanto RoboDK como RobotStudio son softwares de simulación y programación offline de robots industriales, pero tienen algunas diferencias:
+Tanto RoboDK como RobotStudio son herramientas de simulación y programación offline de robots industriales, pero presentan diferencias clave en compatibilidad, funcionalidad y aplicaciones.  
 
-* **RobotStudio**: Es el software propietario de ABB para la simulación y programación de sus robots. Ofrece una integración más profunda con los robots ABB y funciones específicas para ellos.
-* **RoboDK**: Es un software independiente que admite múltiples marcas de robots, incluyendo ABB y Yaskawa. Es más versátil en cuanto a la compatibilidad con diferentes robots.
+## Ventajas y Aplicaciones  
 
-**Usos específicos:**
+### RobotStudio (ABB)  
+**Ventajas:**  
+- Integración total con robots ABB.  
+- Simulación realista con acceso a librerías y controladores oficiales.  
+- Soporta AR/VR para entornos virtuales avanzados.  
+- Permite programar, depurar y probar código RAPID sin necesidad de hardware.  
 
-* **RobotStudio**: Ideal para usuarios que trabajan exclusivamente con robots ABB y necesitan funciones avanzadas específicas para esos robots.
-* **RoboDK**: Adecuado para usuarios que trabajan con robots de diferentes marcas o necesitan un software más flexible y compatible con una amplia gama de robots.
+**Aplicaciones:**  
+- Empresas que trabajan exclusivamente con ABB.  
+- Desarrollo de células robóticas avanzadas con herramientas especializadas.  
+- Programación detallada de ciclos de producción en entornos ABB.  
 
-**Significado personal:**
+**Limitaciones:**  
+- Incompatible con robots de otras marcas.  
+- Licencia costosa, lo que puede ser una barrera para pequeñas empresas o educación.  
 
-Ambas herramientas son valiosas en la industria de la robótica. RobotStudio representa la potencia y la especialización de un software propietario, mientras que RoboDK destaca por su versatilidad y capacidad de adaptación a diferentes sistemas robóticos. La elección entre ambos dependerá de las necesidades específicas de cada usuario y del tipo de robots con los que trabaje.
+### RoboDK (Multimarca)  
+**Ventajas:**  
+- Compatibilidad con múltiples marcas de robots como ABB, KUKA, Yaskawa y FANUC.  
+- Soporte para diversos lenguajes de programación y APIs.  
+- Interfaz intuitiva y fácil de usar para principiantes y expertos.  
+- Mayor flexibilidad en exportación de programas y simulaciones.  
 
-## Programación de una trayectoria polar
+**Aplicaciones:**  
+- Empresas y centros de investigación que trabajan con diferentes marcas de robots.  
+- Educación y formación, gracias a su interfaz amigable y versión gratuita.  
+- Generación de trayectorias y simulaciones rápidas sin depender de software propietario.  
 
+**Limitaciones:**  
+- Aunque es compatible con ABB, no ofrece la misma integración profunda que RobotStudio.  
+- Menos herramientas avanzadas específicas de cada fabricante.  
 
+# Programación Trayectoria de Lemniscata en Motoman H6 con RoboDK  
+
+Este repositorio contiene un script en Python para programar un robot **Motoman H6** en **RoboDK**, generando una trayectoria en forma de **lemniscata**.  
+
+##  Características  
+✅ Programación en Python con la API de RoboDK.  
+✅ Generación de una trayectoria continua y fluida.  
+✅ Implementación de dos lemniscatas perpendiculares.  
+✅ Compatible con robots físicos Motoman H6.  
+
+---
+
+##  Requisitos  
+
+###  Software  
+- **RoboDK** (última versión recomendada)  
+- **Python 3.x** (con la API de RoboDK instalada)  
+
+### Hardware  
+- **Robot Motoman H6** (real o simulado en RoboDK)  
+- Controlador **DX100/DX200/YRC1000** para implementación física.  
+
+---
 
 ## Configuraciones de Velocidad.
 El comando *SPEED* permite configurar la velocidad de reproducción de los movimientos programados, admite la diferenciación entre velocidad articular *"VJ=..."*, velocidad del TCP *"V=..."*, velocidad de reprodcción de posición *"VR=..."*, y de reproducción del eje externo *"VE=..."*. Por lo general la confiugración de este parámetro se da en la misma línea de comando que el comando de movimiento con el que se controla el movimiento del manipulador. Para la modificación de este parámetro solo hace falta escoger el valor en el código que se desea modificar y reescribir el nuevo valor.
