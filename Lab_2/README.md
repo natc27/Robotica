@@ -54,7 +54,6 @@ En la interfaz manual HMI, teach pendant, se encuentran 6 teclas a la izquierda 
 ![Teclas de movimiento manual](Multimedia/TP.png)
 
 Para realizar el cambio entre el movimiento linear y articular, se utiliza la tecla *MOTION TYPE* en el teach pendant y en la pantalla se observ el tipo de movimiento que se encuentra seleccionado.
-## Aplicaciones principales de RoboDK
 
 ## Configuraciones de Velocidad.
 El comando *SPEED* permite configurar la velocidad de reproducción de los movimientos programados, admite la diferenciación entre velocidad articular *"VJ=..."*, velocidad del TCP *"V=..."*, velocidad de reprodcción de posición *"VR=..."*, y de reproducción del eje externo *"VE=..."*. Por lo general la confiugración de este parámetro se da en la misma línea de comando que el comando de movimiento con el que se controla el movimiento del manipulador. Para la modificación de este parámetro solo hace falta escoger el valor en el código que se desea modificar y reescribir el nuevo valor.
@@ -62,7 +61,9 @@ El comando *SPEED* permite configurar la velocidad de reproducción de los movim
 En la pantalla del Teach Pendant, en la barra superior se encuentra una gráfica de un triángulo dividido en tres, similar al utilizado en dispositivos móviles para reconocer el nivel de señal en el que se encuentra. Esto se puede controlar por medio de las teclas *FAST* y *SLOW* en el centro del teach pendant.
 
 ![Nivel de velocidad](Multimedia/Speed.jpg)
-** RoboDK
+
+
+## Aplicaciones principales de RoboDK
 
 RoboDK es una herramienta poderosa y versátil con aplicaciones en diversos campos de la industria:
 
