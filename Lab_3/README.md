@@ -42,5 +42,5 @@ mimimi
 fotofotofoto
 
 ## Referencias.
-![Repositorio Miniforge}(https://github.com/conda-forge/miniforge)
+![Repositorio Miniforge](https://github.com/conda-forge/miniforge)
 ![Robostack|Getting started. Configuracion Mamba ara ROS2](https://robostack.github.io/GettingStarted.html)
