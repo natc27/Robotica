@@ -1,4 +1,10 @@
 # ROS2 (Robot Operating System 2).
+
+Grupo conformado por:\
+**Oscar Andrés Alvarado Buitrago**\
+**Natalia Cely Callejas**
+
+
 A pesar de su nombre, ROS no es un sistema operativo en sí mismo, sino un entorno de trabajo que permite la creación e integración de aplicaciones con robots. Por medio de integraciones modulares permite simular sistemas robóticos, de forma independiente de su Hardware, generando una abstracción sobre los componentes involucrados que se enfoca en su función y el papel que cumplen en la aplicación deseada. 
 Para esto, cada uno de los nodos involucrados, entendidos como componentes del sistema, tomará un papel como cliente o publicador y desarrollará actividades relacionadas con servicio, requerimiento o acción.
 
@@ -36,5 +42,5 @@ mimimi
 fotofotofoto
 
 ## Referencias.
-!(Repositorio Miniforge)[https://github.com/conda-forge/miniforge]
-!(Robostack|Getting started. Configuracion Mamba ara ROS2)[https://robostack.github.io/GettingStarted.html]
+![Repositorio Miniforge}(https://github.com/conda-forge/miniforge)
+![Robostack|Getting started. Configuracion Mamba ara ROS2](https://robostack.github.io/GettingStarted.html)
