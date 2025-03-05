@@ -70,8 +70,10 @@ El repositorio contiene la siguiente documentación:
 - **Video de presentación** con la implementación y simulación.
 
 ## Autores
-- **[Tu Nombre]**
-- [Otros integrantes del equipo]
+- Oscar Andrés Alvarado.
+- Natalia Cely.
+- Omar Pérez.
+- Julián Pulido.
 
 ---
 © 2024 - Universidad Nacional de Colombia. Proyecto desarrollado en el curso de Robótica 2024-II.
