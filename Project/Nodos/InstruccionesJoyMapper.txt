@@ -1,0 +1,13 @@
+1. Compilar paquete
+colcon build --packages-select joy_mapper
+
+2. Instalar paquete
+
+call install/setup.bat
+
+3. Verificas que en ROS este instalado ros-humble-joy.
+4. En una ventana correr turtle sim y en otra joy.
+5. En una nueva ventana, verificar que joy y turtle sim esta enviado mensajes.
+6. Ejecutar joy_mapper
+
+ros2 run joy_to_twist --ros-args -p config_file:"C:\\…\\dualshock4_teleop.yaml"
