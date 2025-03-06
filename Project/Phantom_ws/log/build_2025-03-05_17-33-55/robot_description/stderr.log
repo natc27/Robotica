@@ -1,0 +1,24 @@
+CMake Error at C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/export_robot_state_publisher_nodeExport.cmake:85 (message):
+  The imported target "robot_state_publisher::robot_state_publisher_node"
+  references the file
+
+     "C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/lib/robot_state_publisher_node.lib"
+
+  but this file does not exist.  Possible reasons include:
+
+  * The file was deleted, renamed, or moved to another location.
+
+  * An install or uninstall procedure did not complete successfully.
+
+  * The installation package was faulty and contained
+
+     "C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/export_robot_state_publisher_nodeExport.cmake"
+
+  but not all the files it references.
+
+Call Stack (most recent call first):
+  C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/ament_cmake_export_targets-extras.cmake:9 (include)
+  C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/robot_state_publisherConfig.cmake:41 (include)
+  CMakeLists.txt:6 (find_package)
+
+

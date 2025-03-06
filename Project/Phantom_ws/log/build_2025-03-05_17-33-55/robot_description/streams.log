@@ -1,0 +1,31 @@
+[1.344s] Invoking command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\robot_description': CONDA_PROMPT_MODIFIER=(ros_env) C:\Users\ncely\miniforge3\Library\envs\ros_env\Library\bin\cmake.EXE C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description
+[1.438s] -- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.26100.
+[1.641s] -- Found ament_cmake: 1.3.3 (C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/ament_cmake/cmake)
+[2.594s] -- Found xacro: 2.0.8 (C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/xacro/cmake)
+[2.610s] -- Found robot_state_publisher: 3.0.2 (C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake)
+[2.625s] CMake Error at C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/export_robot_state_publisher_nodeExport.cmake:85 (message):
+[2.625s]   The imported target "robot_state_publisher::robot_state_publisher_node"
+[2.625s]   references the file
+[2.625s] 
+[2.625s]      "C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/lib/robot_state_publisher_node.lib"
+[2.625s] 
+[2.625s]   but this file does not exist.  Possible reasons include:
+[2.625s] 
+[2.625s]   * The file was deleted, renamed, or moved to another location.
+[2.625s] 
+[2.625s]   * An install or uninstall procedure did not complete successfully.
+[2.625s] 
+[2.625s]   * The installation package was faulty and contained
+[2.625s] 
+[2.625s]      "C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/export_robot_state_publisher_nodeExport.cmake"
+[2.625s] 
+[2.625s]   but not all the files it references.
+[2.625s] 
+[2.625s] Call Stack (most recent call first):
+[2.625s]   C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/ament_cmake_export_targets-extras.cmake:9 (include)
+[2.625s]   C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/robot_state_publisherConfig.cmake:41 (include)
+[2.625s]   CMakeLists.txt:6 (find_package)
+[2.625s] 
+[2.625s] 
+[2.625s] -- Configuring incomplete, errors occurred!
+[2.672s] Invoked command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\robot_description' returned '1': CONDA_PROMPT_MODIFIER=(ros_env) C:\Users\ncely\miniforge3\Library\envs\ros_env\Library\bin\cmake.EXE C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description

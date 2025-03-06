@@ -1,0 +1,6 @@
+source;share\joy_mapper\hook\pythonpath.ps1
+source;share\joy_mapper\hook\pythonpath.bat
+source;share\joy_mapper\hook\pythonpath.dsv
+source;share\joy_mapper\hook\ament_prefix_path.ps1
+source;share\joy_mapper\hook\ament_prefix_path.bat
+source;share\joy_mapper\hook\ament_prefix_path.dsv
