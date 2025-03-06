@@ -1,51 +1,74 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
-from geometry_msgs.msg import Twist
+from std_msgs.msg import Float32MultiArray, Int32MultiArray, Bool
 import yaml
+import collections
 
-class JoyToTwist(Node):
+class JoyFilteredPublisher(Node):
     def __init__(self):
-        super().__init__('joy_to_twist')
+        super().__init__('joy_filtered_publisher')
 
-        # Cargar configuraci髇
+        # Cargar configuraci贸n desde el archivo YAML
         self.declare_parameter('config_file', 'dualshock4_config.yaml')
         config_file = self.get_parameter('config_file').get_parameter_value().string_value
+
         with open(config_file, 'r') as file:
             self.config = yaml.safe_load(file)
 
-        # Suscripci髇 a /joy
+        # Crear suscripci贸n y publicaciones
         self.subscription = self.create_subscription(Joy, 'joy', self.joy_callback, 10)
+        self.axes_publisher = self.create_publisher(Float32MultiArray, 'filtered_axes', 10)
+        self.buttons_publisher = self.create_publisher(Int32MultiArray, 'filtered_buttons', 10)
+        self.r1_publisher = self.create_publisher(Bool, 'r1_button', 10)
 
-        # Publicador a /turtle1/cmd_vel
-        self.publisher = self.create_publisher(Twist, 'turtle1/cmd_vel', 10)
+        # Par谩metro del filtro
+        self.window_size = 5  # Tama帽o de la ventana para la media m贸vil
+        self.axis_history = {i: collections.deque(maxlen=self.window_size) for i in range(6)}
+
+    def moving_average(self, index, new_value):
+        """Aplica un filtro de media m贸vil a los valores de los ejes."""
+        self.axis_history[index].append(new_value)
+        return sum(self.axis_history[index]) / len(self.axis_history[index])
 
     def joy_callback(self, msg):
-        twist = Twist()
+        # Leer el estado de R1
+        r1_pressed = msg.buttons[self.config['buttons']['enable_send']] == 1
 
-        # Movimiento en X (adelante/atr醩)
-        twist.linear.x = msg.axes[self.config['axes']['linear_x']] * self.config['scales']['linear_x']
+        # Publicar R1 en un t贸pico separado
+        r1_msg = Bool()
+        r1_msg.data = r1_pressed
+        self.r1_publisher.publish(r1_msg)
 
-        # Movimiento lateral (izquierda/derecha)
-        twist.linear.y = msg.axes[self.config['axes']['linear_y']] * self.config['scales']['linear_y']
+        # Publicar los 3 botones especiales siempre
+        button_msg = Int32MultiArray()
+        button_msg.data = [
+            msg.buttons[self.config['buttons']['special_1']],
+            msg.buttons[self.config['buttons']['special_2']],
+            msg.buttons[self.config['buttons']['special_3']],
+        ]
+        self.buttons_publisher.publish(button_msg)
 
-        # Rotaci髇 Z
-        twist.angular.z = msg.axes[self.config['axes']['angular_z']] * self.config['scales']['angular_z']
-
-        # Turbo duplica velocidades
-        if msg.buttons[self.config['buttons']['turbo']] == 1:
-            twist.linear.x *= 2
-            twist.linear.y *= 2
-            twist.angular.z *= 2
-
-        self.publisher.publish(twist)
+        # Si R1 est谩 presionado, publica los ejes (sticks + gatillos L2 y R2) con filtro
+        if r1_pressed:
+            axes_msg = Float32MultiArray()
+            axes_msg.data = [
+                self.moving_average(0, msg.axes[0]),  # Stick izquierdo horizontal
+                self.moving_average(1, msg.axes[1]),  # Stick izquierdo vertical
+                self.moving_average(2, msg.axes[3]),  # Stick derecho horizontal
+                self.moving_average(3, msg.axes[4]),  # Stick derecho vertical
+                self.moving_average(4, msg.axes[2]),  # Gatillo L2
+                self.moving_average(5, msg.axes[5]),  # Gatillo R2
+            ]
+            self.axes_publisher.publish(axes_msg)
 
 def main(args=None):
     rclpy.init(args=args)
-    node = JoyToTwist()
+    node = JoyFilteredPublisher()
     rclpy.spin(node)
     rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
+
 
