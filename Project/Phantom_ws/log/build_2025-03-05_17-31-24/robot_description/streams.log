@@ -1,0 +1,44 @@
+[1.172s] Invoking command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\robot_description': CONDA_PROMPT_MODIFIER=(ros_env) C:\Users\ncely\miniforge3\Library\envs\ros_env\Library\bin\cmake.EXE C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description -G Visual Studio 17 2022
+[1.250s] -- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.26100.
+[3.344s] -- The C compiler identification is MSVC 19.43.34808.0
+[4.500s] -- The CXX compiler identification is MSVC 19.43.34808.0
+[4.672s] -- Detecting C compiler ABI info
+[5.938s] -- Detecting C compiler ABI info - done
+[5.969s] -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/cl.exe - skipped
+[5.969s] -- Detecting C compile features
+[5.985s] -- Detecting C compile features - done
+[6.078s] -- Detecting CXX compiler ABI info
+[7.188s] -- Detecting CXX compiler ABI info - done
+[7.235s] -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/cl.exe - skipped
+[7.235s] -- Detecting CXX compile features
+[7.235s] -- Detecting CXX compile features - done
+[7.282s] -- Found ament_cmake: 1.3.3 (C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/ament_cmake/cmake)
+[10.313s] -- Found Python3: C:/ProgramData/miniforge3/python.exe (found version "3.12.8") found components: Interpreter 
+[10.844s] -- Found xacro: 2.0.8 (C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/xacro/cmake)
+[10.860s] -- Found robot_state_publisher: 3.0.2 (C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake)
+[10.875s] CMake Error at C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/export_robot_state_publisher_nodeExport.cmake:85 (message):
+[10.875s]   The imported target "robot_state_publisher::robot_state_publisher_node"
+[10.875s]   references the file
+[10.875s] 
+[10.875s]      "C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/lib/robot_state_publisher_node.lib"
+[10.875s] 
+[10.875s]   but this file does not exist.  Possible reasons include:
+[10.875s] 
+[10.875s]   * The file was deleted, renamed, or moved to another location.
+[10.875s] 
+[10.875s]   * An install or uninstall procedure did not complete successfully.
+[10.875s] 
+[10.875s]   * The installation package was faulty and contained
+[10.875s] 
+[10.891s]      "C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/export_robot_state_publisher_nodeExport.cmake"
+[10.891s] 
+[10.891s]   but not all the files it references.
+[10.891s] 
+[10.891s] Call Stack (most recent call first):
+[10.891s]   C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/ament_cmake_export_targets-extras.cmake:9 (include)
+[10.891s]   C:/Users/ncely/miniforge3/Library/envs/ros_env/Library/share/robot_state_publisher/cmake/robot_state_publisherConfig.cmake:41 (include)
+[10.891s]   CMakeLists.txt:6 (find_package)
+[10.891s] 
+[10.891s] 
+[10.891s] -- Configuring incomplete, errors occurred!
+[10.922s] Invoked command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\robot_description' returned '1': CONDA_PROMPT_MODIFIER=(ros_env) C:\Users\ncely\miniforge3\Library\envs\ros_env\Library\bin\cmake.EXE C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description -G Visual Studio 17 2022

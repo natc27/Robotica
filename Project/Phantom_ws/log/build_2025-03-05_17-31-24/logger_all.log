@@ -1,0 +1,152 @@
+[0.350s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['C:\\Users\\ncely\\miniforge3\\Library\\envs\\ros_env\\Scripts\\colcon', 'build'][0m
+[0.350s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x0000020D75B71210>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x0000020D75A3A860>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x0000020D75A3A860>>)[0m
+[0.587s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.589s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.589s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.589s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.589s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.589s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.589s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws'
+[0.589s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.589s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.589s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.589s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.589s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.589s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.589s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.589s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.589s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.623s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.634s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\joy_mapper) by extensions ['ignore', 'ignore_ament_install']
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\joy_mapper) by extension 'ignore'
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\joy_mapper) by extension 'ignore_ament_install'
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\joy_mapper) by extensions ['colcon_pkg']
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\joy_mapper) by extension 'colcon_pkg'
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\joy_mapper) by extensions ['colcon_meta']
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\joy_mapper) by extension 'colcon_meta'
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\joy_mapper) by extensions ['ros']
+[0.636s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\joy_mapper) by extension 'ros'
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src\joy_mapper' with type 'ros.ament_python' and name 'joy_mapper'[0m
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\robot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\robot_description) by extension 'ignore'
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\robot_description) by extension 'ignore_ament_install'
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\robot_description) by extensions ['colcon_pkg']
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\robot_description) by extension 'colcon_pkg'
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\robot_description) by extensions ['colcon_meta']
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\robot_description) by extension 'colcon_meta'
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\robot_description) by extensions ['ros']
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src\robot_description) by extension 'ros'
+[0.639s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src\robot_description' with type 'ros.catkin' and name 'robot_description'[0m
+[0.639s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.639s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.639s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.639s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.639s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'joy_mapper' build argument 'cmake_args' from command line to 'None'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'joy_mapper' build argument 'cmake_target' from command line to 'None'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'joy_mapper' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'joy_mapper' build argument 'cmake_clean_cache' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'joy_mapper' build argument 'cmake_clean_first' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'joy_mapper' build argument 'cmake_force_configure' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'joy_mapper' build argument 'ament_cmake_args' from command line to 'None'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'joy_mapper' build argument 'catkin_cmake_args' from command line to 'None'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'joy_mapper' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'joy_mapper' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\Users\\ncely\\OneDrive\\Documentos\\GitRobotica\\Robotica\\Project\\Phantom_ws\\build\\joy_mapper', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\Users\\ncely\\OneDrive\\Documentos\\GitRobotica\\Robotica\\Project\\Phantom_ws\\install\\joy_mapper', 'merge_install': False, 'path': 'C:\\Users\\ncely\\OneDrive\\Documentos\\GitRobotica\\Robotica\\Project\\Phantom_ws\\src\\joy_mapper', 'symlink_install': False, 'test_result_base': None}[0m
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'robot_description' build argument 'cmake_args' from command line to 'None'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'robot_description' build argument 'cmake_target' from command line to 'None'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'robot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'robot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'robot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'robot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'robot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'robot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'robot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.671s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'robot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\Users\\ncely\\OneDrive\\Documentos\\GitRobotica\\Robotica\\Project\\Phantom_ws\\build\\robot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\Users\\ncely\\OneDrive\\Documentos\\GitRobotica\\Robotica\\Project\\Phantom_ws\\install\\robot_description', 'merge_install': False, 'path': 'C:\\Users\\ncely\\OneDrive\\Documentos\\GitRobotica\\Robotica\\Project\\Phantom_ws\\src\\robot_description', 'symlink_install': False, 'test_result_base': None}[0m
+[0.671s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.676s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.676s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\joy_mapper' with build type 'ament_python'
+[0.676s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('joy_mapper', 'ament_prefix_path')
+[0.680s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.sh': Not used on Windows systems
+[0.680s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper\hook\ament_prefix_path.ps1'
+[0.681s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper\hook\ament_prefix_path.bat'
+[0.683s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper\hook\ament_prefix_path.dsv'
+[0.704s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.744s] [34mcolcon.colcon_ros.task.catkin.build[0m [1;30mINFO[0m Building ROS package in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description' with build type 'catkin'
+[0.744s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description'
+[0.744s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.876s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\joy_mapper'
+[1.876s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.923s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\robot_description': CONDA_PROMPT_MODIFIER=(ros_env) C:\Users\ncely\miniforge3\Library\envs\ros_env\Library\bin\cmake.EXE C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description -G Visual Studio 17 2022[0m
+[3.602s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\joy_mapper': CONDA_PROMPT_MODIFIER=(ros_env) PYTHONPATH=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\prefix_override;C:\Users\ncely\miniforge3\Library\envs\ros_env\Lib\site-packages\colcon_core\task\python\colcon_distutils_commands;C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages;%PYTHONPATH% C:\Users\ncely\miniforge3\Library\envs\ros_env\python.exe -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ..\..\build\joy_mapper build --build-base C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build install --record C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\install.log --single-version-externally-managed install_data[0m
+[6.150s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\joy_mapper' returned '0': CONDA_PROMPT_MODIFIER=(ros_env) PYTHONPATH=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\prefix_override;C:\Users\ncely\miniforge3\Library\envs\ros_env\Lib\site-packages\colcon_core\task\python\colcon_distutils_commands;C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages;%PYTHONPATH% C:\Users\ncely\miniforge3\Library\envs\ros_env\python.exe -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ..\..\build\joy_mapper build --build-base C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build install --record C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\install.log --single-version-externally-managed install_data[0m
+[6.163s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper' for CMake module files
+[6.163s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper' for CMake config files
+[6.167s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\bin'
+[6.167s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\bin'
+[6.168s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\lib\pkgconfig\joy_mapper.pc'
+[6.168s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages'
+[6.168s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('joy_mapper', 'pythonpath')
+[6.168s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper\hook\pythonpath.ps1'
+[6.169s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper\hook\pythonpath.bat'
+[6.171s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper\hook\pythonpath.dsv'
+[6.173s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Scripts'
+[6.173s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(joy_mapper)
+[6.175s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper\package.ps1'
+[6.177s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper\package.bat'
+[6.179s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper\package.dsv'
+[6.179s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\colcon-core\packages\joy_mapper)
+[11.669s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\robot_description' returned '1': CONDA_PROMPT_MODIFIER=(ros_env) C:\Users\ncely\miniforge3\Library\envs\ros_env\Library\bin\cmake.EXE C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description -G Visual Studio 17 2022[0m
+[11.669s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(robot_description)
+[11.669s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description' for CMake module files
+[11.669s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description' for CMake config files
+[11.676s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description\bin'
+[11.676s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description\bin'
+[11.676s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description\lib\pkgconfig\robot_description.pc'
+[11.676s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description\Lib\site-packages'
+[11.676s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description\Scripts'
+[11.676s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description\share\robot_description\package.ps1'
+[11.679s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description\share\robot_description\package.bat'
+[11.681s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description\share\robot_description\package.dsv'
+[11.681s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description\share\colcon-core\packages\robot_description)
+[11.698s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[11.698s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[11.700s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '1'[0m
+[11.700s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[11.709s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.notify2': 'notify2' not found
+[11.709s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.notify_send': Not used on non-Linux systems
+[11.709s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[11.709s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'win32'
+[16.770s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[16.770s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\local_setup.ps1'
+[16.773s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\_local_setup_util_ps1.py'
+[16.779s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\setup.ps1'
+[16.782s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\local_setup.bat'
+[16.784s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\_local_setup_util_bat.py'
+[16.784s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\setup.bat'

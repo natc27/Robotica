@@ -1,0 +1,2 @@
+[console_scripts]
+joy_to_twist = joy_mapper.joy_to_twist:main

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<robot name="phantomx-pincher" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Propiedades Generales -->
+    <xacro:property name="cylinder_length" value="0.5"/>
+    <xacro:property name="cylinder_radius" value="0.05"/>
+    <xacro:property name="passive_color" value="0 0 0.8 1"/>
+    <xacro:property name="active_color" value="1 0 0 1"/>
+
+    <!-- Macro para definir links -->
+    <xacro:macro name="create_link" params="name color">
+        <link name="${name}">
+            <visual>
+                <material name="${color}">
+                    <color rgba="${color}"/>
+                </material>
+                <geometry>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                    <cylinder length="${cylinder_length}" radius="${cylinder_radius}"/>
+                </geometry>
+            </visual>
+        </link>
+    </xacro:macro>
+
+    <!-- Macro para definir joints -->
+    <xacro:macro name="create_joint" params="name type parent child xyz rpy axis">
+        <joint name="${name}" type="${type}">
+            <origin xyz="${xyz}" rpy="${rpy}"/>
+            <parent link="${parent}"/>
+            <child link="${child}"/>
+            <axis xyz="${axis}"/>
+        </joint>
+    </xacro:macro>
+
+    <!-- Links y Joints -->
+    <xacro:create_link name="link0_passive" color="${passive_color}"/>
+    <xacro:create_link name="link0_x_axis" color="${active_color}"/>
+    <xacro:create_joint name="q0_x" type="fixed" parent="link0_passive" child="link0_x_axis" xyz="0 0 0" rpy="0 1.571 0" axis="0 0 0"/>
+
+    <xacro:create_link name="link1" color="${passive_color}"/>
+    <xacro:create_link name="link1_x_axis" color="${active_color}"/>
+    <xacro:create_joint name="q1" type="revolute" parent="link0_passive" child="link1" xyz="0 0 0.08" rpy="0 0 1.5707963267948966" axis="0 0 1"/>
+    <xacro:create_joint name="q1_passive" type="fixed" parent="link1" child="link1_passive" xyz="0 0 0" rpy="1.5707963267948966 0 0" axis="0 0 0"/>
+
+    <xacro:create_link name="link1_passive" color="${passive_color}"/>
+    <xacro:create_joint name="q1_x" type="fixed" parent="link1_passive" child="link1_x_axis" xyz="0 0 0" rpy="0 1.571 0" axis="0 0 0"/>
+
+    <xacro:create_link name="link2" color="${passive_color}"/>
+    <xacro:create_link name="link2_x_axis" color="${active_color}"/>
+    <xacro:create_joint name="q2" type="revolute" parent="link1_passive" child="link2" xyz="0 0 0" rpy="0 0 1.5707963267948966" axis="0 0 1"/>
+    <xacro:create_joint name="q2_passive" type="fixed" parent="link2" child="link2_passive" xyz="0.105 0 0" rpy="0 0 0" axis="0 0 0"/>
+
+    <xacro:create_link name="link2_passive" color="${passive_color}"/>
+    <xacro:create_joint name="q2_x" type="fixed" parent="link2_passive" child="link2_x_axis" xyz="0 0 0" rpy="0 1.571 0" axis="0 0 0"/>
+
+    <xacro:create_link name="link3" color="${passive_color}"/>
+    <xacro:create_link name="link3_x_axis" color="${active_color}"/>
+    <xacro:create_joint name="q3" type="revolute" parent="link2_passive" child="link3" xyz="0 0 0" rpy="0 0 -1.5707963267948966" axis="0 0 1"/>
+    <xacro:create_joint name="q3_passive" type="fixed" parent="link3" child="link3_passive" xyz="0.105 0 0" rpy="0 0 0" axis="0 0 0"/>
+
+    <xacro:create_link name="link3_passive" color="${passive_color}"/>
+    <xacro:create_joint name="q3_x" type="fixed" parent="link3_passive" child="link3_x_axis" xyz="0 0 0" rpy="0 1.571 0" axis="0 0 0"/>
+
+    <xacro:create_link name="link4" color="${passive_color}"/>
+    <xacro:create_link name="link4_x_axis" color="${active_color}"/>
+    <xacro:create_joint name="q4" type="revolute" parent="link3_passive" child="link4" xyz="0 0 0" rpy="0 0 0" axis="0 0 1"/>
+    <xacro:create_joint name="q4_passive" type="fixed" parent="link4" child="link4_passive" xyz="0.095 0 0" rpy="0 0 0" axis="0 0 0"/>
+
+    <xacro:create_link name="link4_passive" color="${passive_color}"/>
+    <xacro:create_joint name="q4_x" type="fixed" parent="link4_passive" child="link4_x_axis" xyz="0 0 0" rpy="0 1.571 0" axis="0 0 0"/>
+
+</robot>
+ 

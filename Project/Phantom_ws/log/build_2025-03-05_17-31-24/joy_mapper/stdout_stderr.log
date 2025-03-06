@@ -1,0 +1,36 @@
+running egg_info
+creating ..\..\build\joy_mapper\joy_mapper.egg-info
+writing ..\..\build\joy_mapper\joy_mapper.egg-info\PKG-INFO
+writing dependency_links to ..\..\build\joy_mapper\joy_mapper.egg-info\dependency_links.txt
+writing entry points to ..\..\build\joy_mapper\joy_mapper.egg-info\entry_points.txt
+writing requirements to ..\..\build\joy_mapper\joy_mapper.egg-info\requires.txt
+writing top-level names to ..\..\build\joy_mapper\joy_mapper.egg-info\top_level.txt
+writing manifest file '..\..\build\joy_mapper\joy_mapper.egg-info\SOURCES.txt'
+reading manifest file '..\..\build\joy_mapper\joy_mapper.egg-info\SOURCES.txt'
+writing manifest file '..\..\build\joy_mapper\joy_mapper.egg-info\SOURCES.txt'
+running build
+running build_py
+creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build
+creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib
+creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper
+copying joy_mapper\joy_to_twist.py -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper
+copying joy_mapper\__init__.py -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper
+running install
+running install_lib
+creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper
+copying C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper\joy_to_twist.py -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper
+copying C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper\__init__.py -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper
+byte-compiling C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper\joy_to_twist.py to joy_to_twist.cpython-310.pyc
+byte-compiling C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper\__init__.py to __init__.cpython-310.pyc
+running install_data
+creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\ament_index
+creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\ament_index\resource_index
+creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\ament_index\resource_index\packages
+copying resource\joy_mapper -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\ament_index\resource_index\packages
+copying package.xml -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper
+running install_egg_info
+Copying ..\..\build\joy_mapper\joy_mapper.egg-info to C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper-0.0.0-py3.10.egg-info
+running install_scripts
+Installing joy_to_twist-script.py script to C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\lib\joy_mapper
+Installing joy_to_twist.exe script to C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\lib\joy_mapper
+writing list of installed files to 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\install.log'

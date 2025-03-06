@@ -1,0 +1,22 @@
+[0.046s] Invoking command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\robot_description': CONDA_EXES="C:\Users\ncely\miniforge3\Scripts\conda.exe" CONDA_PROMPT_MODIFIER=(ros_env) C:\Users\ncely\miniforge3\envs\ros_env\Library\bin\cmake.EXE C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description
+[0.437s] -- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.26100.
+[0.562s] -- Found ament_cmake: 1.3.3 (C:/Users/ncely/miniforge3/envs/ros_env/Library/share/ament_cmake/cmake)
+[2.078s] CMake Error at CMakeLists.txt:5 (find_package):
+[2.078s]   By not providing "Findxacro.cmake" in CMAKE_MODULE_PATH this project has
+[2.078s]   asked CMake to find a package configuration file provided by "xacro", but
+[2.078s]   CMake did not find one.
+[2.078s] 
+[2.078s]   Could not find a package configuration file provided by "xacro" with any of
+[2.078s]   the following names:
+[2.078s] 
+[2.078s]     xacroConfig.cmake
+[2.078s]     xacro-config.cmake
+[2.078s] 
+[2.078s]   Add the installation prefix of "xacro" to CMAKE_PREFIX_PATH or set
+[2.078s]   "xacro_DIR" to a directory containing one of the above files.  If "xacro"
+[2.078s]   provides a separate development package or SDK, be sure it has been
+[2.078s]   installed.
+[2.078s] 
+[2.078s] 
+[2.078s] -- Configuring incomplete, errors occurred!
+[2.093s] Invoked command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\robot_description' returned '1': CONDA_EXES="C:\Users\ncely\miniforge3\Scripts\conda.exe" CONDA_PROMPT_MODIFIER=(ros_env) C:\Users\ncely\miniforge3\envs\ros_env\Library\bin\cmake.EXE C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\robot_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\robot_description

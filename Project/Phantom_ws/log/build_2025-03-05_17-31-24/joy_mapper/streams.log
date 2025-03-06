@@ -1,0 +1,38 @@
+[2.922s] Invoking command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\joy_mapper': CONDA_PROMPT_MODIFIER=(ros_env) PYTHONPATH=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\prefix_override;C:\Users\ncely\miniforge3\Library\envs\ros_env\Lib\site-packages\colcon_core\task\python\colcon_distutils_commands;C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages;%PYTHONPATH% C:\Users\ncely\miniforge3\Library\envs\ros_env\python.exe -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ..\..\build\joy_mapper build --build-base C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build install --record C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\install.log --single-version-externally-managed install_data
+[4.297s] running egg_info
+[4.297s] creating ..\..\build\joy_mapper\joy_mapper.egg-info
+[4.390s] writing ..\..\build\joy_mapper\joy_mapper.egg-info\PKG-INFO
+[4.453s] writing dependency_links to ..\..\build\joy_mapper\joy_mapper.egg-info\dependency_links.txt
+[4.719s] writing entry points to ..\..\build\joy_mapper\joy_mapper.egg-info\entry_points.txt
+[4.859s] writing requirements to ..\..\build\joy_mapper\joy_mapper.egg-info\requires.txt
+[4.937s] writing top-level names to ..\..\build\joy_mapper\joy_mapper.egg-info\top_level.txt
+[4.937s] writing manifest file '..\..\build\joy_mapper\joy_mapper.egg-info\SOURCES.txt'
+[5.078s] reading manifest file '..\..\build\joy_mapper\joy_mapper.egg-info\SOURCES.txt'
+[5.078s] writing manifest file '..\..\build\joy_mapper\joy_mapper.egg-info\SOURCES.txt'
+[5.078s] running build
+[5.078s] running build_py
+[5.078s] creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build
+[5.078s] creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib
+[5.078s] creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper
+[5.078s] copying joy_mapper\joy_to_twist.py -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper
+[5.078s] copying joy_mapper\__init__.py -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper
+[5.094s] running install
+[5.094s] running install_lib
+[5.187s] creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper
+[5.187s] copying C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper\joy_to_twist.py -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper
+[5.187s] copying C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build\lib\joy_mapper\__init__.py -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper
+[5.187s] byte-compiling C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper\joy_to_twist.py to joy_to_twist.cpython-310.pyc
+[5.203s] byte-compiling C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper\__init__.py to __init__.cpython-310.pyc
+[5.203s] running install_data
+[5.203s] creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\ament_index
+[5.203s] creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\ament_index\resource_index
+[5.203s] creating C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\ament_index\resource_index\packages
+[5.203s] copying resource\joy_mapper -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\ament_index\resource_index\packages
+[5.203s] copying package.xml -> C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\share\joy_mapper
+[5.203s] running install_egg_info
+[5.265s] Copying ..\..\build\joy_mapper\joy_mapper.egg-info to C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages\joy_mapper-0.0.0-py3.10.egg-info
+[5.281s] running install_scripts
+[5.422s] Installing joy_to_twist-script.py script to C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\lib\joy_mapper
+[5.422s] Installing joy_to_twist.exe script to C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\lib\joy_mapper
+[5.422s] writing list of installed files to 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\install.log'
+[5.469s] Invoked command in 'C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\src\joy_mapper' returned '0': CONDA_PROMPT_MODIFIER=(ros_env) PYTHONPATH=C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\prefix_override;C:\Users\ncely\miniforge3\Library\envs\ros_env\Lib\site-packages\colcon_core\task\python\colcon_distutils_commands;C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\install\joy_mapper\Lib\site-packages;%PYTHONPATH% C:\Users\ncely\miniforge3\Library\envs\ros_env\python.exe -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ..\..\build\joy_mapper build --build-base C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\build install --record C:\Users\ncely\OneDrive\Documentos\GitRobotica\Robotica\Project\Phantom_ws\build\joy_mapper\install.log --single-version-externally-managed install_data
