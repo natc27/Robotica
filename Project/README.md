@@ -9,65 +9,30 @@ El sistema se basa en una conexión **LAN** entre dos computadoras:
 - **Zona Local (Maestro)**: donde el operador controla y supervisa la operación.
 - **Zona Remota (Esclavo)**: donde se encuentra el robot físico ejecutando los comandos.
 
-La implementación se desarrolla con **ROS2**, utilizando herramientas como **Rviz, CoppeliaSim y el toolbox de robótica de Peter Corke**.
+La implementación se desarrolla con **ROS2**, utilizando herramientas como **Matlab, Dynamixel Wizard y diversos paquetes ya creados en ROS2**.
 
-## Requisitos del Sistema
-- **Ubuntu 22.04 LTS** con ROS instalado.
-- Espacio de trabajo `catkin` o equivalente en Windows.
-- **Dynamixel Workbench**: [Repositorio](https://github.com/labsir-un/phantomx-workbench).
-- **Paquete Phantom X**: [Repositorio](https://github.com/felipeg17/px_robot).
-- **Python o MATLAB 2015b+**.
-- **CoppeliaSim EDU**.
-- **Joystick físico** para el modo manual.
+## Análisis - Cinemática directa del Manipulador.
+A partir de mediciones se extrajeron los parámetros de Denavit-Hartenberg correspondientes a la cinemática directa del **Phantom X Pincher**. Inicialmente con una representación gráfica basada en mediciones.
+![Cinemática Directa](Multimedia/CD-Phantom.jpg)
 
-## Instalación
-1. Clonar los repositorios requeridos:
-   ```bash
-   git clone https://github.com/labsir-un/phantomx-workbench
-   git clone https://github.com/felipeg17/px_robot
-   ```
-2. Instalar dependencias:
-   ```bash
-   sudo apt update && sudo apt install ros-foxy-dynamixel-sdk
-   ```
-3. Configurar ROS:
-   ```bash
-   source /opt/ros/foxy/setup.bash
-   export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src
-   ```
-4. Compilar el workspace:
-   ```bash
-   cd ~/catkin_ws
-   catkin_make
-   ```
-5. Ejecutar la simulación:
-   ```bash
-   roslaunch px_robot simulation.launch
-   ```
+| $i$ | $d_i$ | $\theta_i$ | $a_i$ | $\alpha_i$ | Offset |
+|---|---|---|---|---|---|
+| 1 | $L_1$ | $q_1$ | $0$ | $\pi/2$ | $\pi/2$ |
+| 2 | $0$ | $q_2$ | $L_2$ | $0$ | $\pi/2$ |
+| 3 | $0$ | $q_3$ | $L_3$ | $0$ | $-\pi/2$ |
+| 4 | $0$ | $q_4$ | $L_4$ | $0$ | $0$ |
 
-## Modo de Operación
-### 1. Operación Automática
-- Se ejecuta en Rviz y permite seleccionar un punto de destino en la interfaz gráfica.
-- El robot sigue trayectorias predefinidas para llevar el material a su destino.
-- Se puede activar una cámara virtual para supervisión remota.
+Cuyos valores numéricos son:
+$$ L_1= 12 cm; \hspace{0.5cm} L_2= 10.5 cm; \hspace{0.5cm} L_3= 10.5 cm; \hspace{0.5cm} L_4=10 cm$$
 
-### 2. Operación Manual
-- Se usa un **joystick** para controlar el robot en tiempo real.
-- Se pueden modificar las coordenadas `(x, y, z)` del efector y accionar el **gripper**.
-- La velocidad del movimiento es proporcional a la inclinación del joystick.
+Esto a su vez permitió crear el archivo descriptor del robot para que su visualización eventual en entornos como MATLAB, Coppelia y Rviz corresponda al manipulador físico. Los cálculos fueron comparados con las posiciones esperadas, sin embargo, su comprobación final se produce en el control automático.
 
-## Consideraciones Importantes
-- Se debe asegurar una **baja latencia** en la red para garantizar un control en tiempo real.
-- La simulación en **CoppeliaSim y Rviz** debe reflejar con precisión la dinámica del robot.
-- Es recomendable fijar el **Phantom X Pincher** a una base estable para evitar vibraciones o movimientos inesperados.
+![Visualización en MATLAB](Multimedia/vis-matlab.jpg)
 
-## Documentación y Reportes
-El repositorio contiene la siguiente documentación:
-- **Análisis de Cinemática Directa e Inversa** con resultados numéricos.
-- **Diagrama de flujo** del sistema.
-- **Código en Python/MATLAB** comentado y documentado.
-- **Comparación de la teleoperación manual vs automática**.
-- **Video de presentación** con la implementación y simulación.
+## Análisis - Cinemática inversa.
+
+Una vez obtenida la matriz de transformación homogénea (MTH) se implementa la función *invkin* en MATLAB, creada para recibir las coordenadas (x,y,z) de una posición deseada, las longitudes de los eslabones, definidas anteriormente, el ángulo de alcance ($\phi$) y el robot para poder realizar la visualización, esta función calcula la distancia del efector final y verifica la alcanzabilidad del mismo, y utilizando el método geométrico (basado en la ley de senos y la ley de cosenos) halla las posiciones articulares en un vector $q=[q_1 q_2 q_3 q_4]$.
+El proceso de obtención de las posiciones articulares se realiza de manera recursiva 
 
 ## Autores
 - Oscar Andrés Alvarado.
