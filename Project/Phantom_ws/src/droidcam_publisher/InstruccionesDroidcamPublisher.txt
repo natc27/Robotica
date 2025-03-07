@@ -1,0 +1,18 @@
+1. Instalar la app droid cam en algún dispositivo móvil, ejecutar y obtener la dirección IP de la cámara.
+1. Verificar que se tengan las dependencia cv_bridge este en instalado, sino realizar la instalación con el entorno de ROS2 activo.
+
+pip install opencv-python cv_bridge
+
+3. Modificar droidcam_params.yaml en src/droidcam_publisher con  dirección IP de la cámara y el numero de fotogramas deseado.
+2. Compilar el paquete
+
+colcon build --packages-select droidcam_publisher
+
+3. Instalar paquete
+
+call install/setup.bat
+
+3. Verifica que en ROS este instalado droidcam_publisher.
+4. Ejecutar droidcam_publisher
+
+ros2 run droidcam_publisher droidcam_publisher

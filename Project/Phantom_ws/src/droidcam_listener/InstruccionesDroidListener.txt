@@ -1,0 +1,16 @@
+1. Verificar que se tengan las dependencia cv_bridge este en instalado, sino realizar la instalación con el entorno de ROS2 activo.
+
+pip install opencv-python cv_bridge
+
+2. Compilar paqueta
+
+colcon build --packages-select droidcam_listener
+
+3. Instalar paquete
+
+call install/setup.bat
+
+3. Verifica que en ROS este instalado droidcam_listener.
+4. Ejecutar joy_mapper
+
+ros2 run droidcam_listener droidcam_listener
