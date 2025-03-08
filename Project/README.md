@@ -49,6 +49,7 @@ https://github.com/natc27/Robotica/blob/0de8620d91547bff2e10a3186a70adac67408662
 ### Phantom Controller
 ### Phantom Kinematics
 ### Joy Mapper
+El nodo joy mapper es un nodo que filtra los contenidos del nodo de lectura Joy.
 ### DroidCam Publisher
 ### DroidCam Listener
 
