@@ -125,8 +125,11 @@ https://github.com/natc27/Robotica/blob/8fbe2d26b156bf28dd0d25169aa4f19af39d298c
 
 #### Phantom Kinematics
 #### Joy Mapper
-El nodo joy mapper es un nodo que filtra los contenidos del nodo de lectura Joy. El desarrollo se enfoco para el uso de un mando de DualShock4 de PlayStation 4, pero es posible adaptarlo para otros controladores que hagan uso de joysticks.
+El nodo joy mapper es un nodo que filtra los contenidos del nodo de lectura Joy. El desarrollo se enfoco para el uso de un mando de DualShock4 de PlayStation 4, pero es posible adaptarlo para otros controladores que hagan uso de joysticks. En la imagen aparecen resaltados los joysticks y botones que se usaron.
 
+![BotonesDualShock4 ](Multimedia/dual4.png)
+
+En primera instancia, se verifico no solo la conexion de los botones
 
 #### DroidCam Publisher
 #### DroidCam Listener
