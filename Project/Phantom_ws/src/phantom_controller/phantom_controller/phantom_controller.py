@@ -164,7 +164,7 @@ class PhantomController(Node):
         msg_pos = UInt16MultiArray()
         msg_vel = UInt16MultiArray()
 
-        # Read present positions
+        # Leer posiciones actuales
         pos_arr = [0, 0, 0, 0, 0]
         for i in range(len(DXL_IDS)):
             id = DXL_IDS[i]
@@ -172,7 +172,7 @@ class PhantomController(Node):
             pos_arr[i] = dxl_present_position
         self.joint_pos_ = pos_arr
 
-        # Read present velocities
+        # Leer velocidades actuales
         vel_arr = [0, 0, 0, 0, 0]
         for i in range(len(DXL_IDS)):
             id = DXL_IDS[i]
