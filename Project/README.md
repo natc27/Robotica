@@ -213,6 +213,18 @@ Su correcta activacion se señala con un mensaje. En cuanto a la calidad del vid
 A continuación, se muestra el diagrama de flujo del funcionamiento general del robot, en donde se colocan las acciones principales del robot, es decir, el modo manual y automático.
 ![flowchart](Multimedia/flowchart.png)
 
+# Implementación de modo manual
+
+Para esto realiamos la cadena de comunicacion:
+1. Mando DualShock4 a nodo joy y publica /joy.
+2. Mensaje /joy entra a nodo joy_mapper y publica /filtered_axes, /filtered_buttons y /r1_button.
+3. Mensajes /filtered_axes, /filtered_buttons y /r1_button entran a nodo Phantom Kinematics y publica /goal_joint_vel y /goal_joint_vel
+4. Mensaje /goal_joint_vel y /goal_joint_vel ingresan a nodo Phantom Controller y se da movimiento al Robot.
+
+Mediante esta cadena de mensajes, se puede controlar el pinhcer usanod un mando, pero se pudo notra cierto lag o movimiento otosco en este modo debido a que Phantom Kinematics calcula el valor de /goal_joint_vel en base a los valores de /filtered_axes y /filtered_buttons, y usa como dato de seguridad /r1_button. Este calculo lo realiza mediante el incremneto dicretos del valor de la posicion articular actual pero esto ocasiona un problema.
+
+
+
 # Implementación de modo automático con Matlab
 
 Este proyecto implementa un control completo para el manipulador Phantom Pincher X utilizando MATLAB, la **toolbox de Robótica de Peter Corke y ROS 2. El código .mlx define la cinemática del robot, simula su movimiento y envía comandos a través de ROS 2 para controlar el robot en un entorno real.
