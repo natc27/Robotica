@@ -176,7 +176,9 @@ https://github.com/natc27/Robotica/blob/16925ed3875dbbcfb20b03f7069fddddad7b0491
 
 Un aspecto a mejorar para proximas versiones tiene que ver con en **yaml** para quede ademas de permitir configurar la distribucion de botones, permita decidir que señales usar y cuales no dando la mayor soporte de hardware.
 
+
 #### DroidCam Publisher
+Es un nodo que con ayuda de la aplicacion **DroidCam** (disponible en PlayStore) puede convertir cualquier smartphone en una camara inhalambrica a la que se puede acceder medinate IP.
 #### DroidCam Listener
 
 ## Diagrama de flujo de las acciones del robot
