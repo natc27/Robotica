@@ -22,8 +22,7 @@ A partir de mediciones se extrajeron los parámetros de Denavit-Hartenberg corre
 | 3 | $0$ | $q_3$ | $L_3$ | $0$ | $-\pi/2$ |
 | 4 | $0$ | $q_4$ | $L_4$ | $0$ | $0$ |
 
-Cuyos valores numéricos son:
-$$ L_1= 12 cm; \hspace{0.5cm} L_2= 10.5 cm; \hspace{0.5cm} L_3= 10.5 cm; \hspace{0.5cm} L_4=10 cm$$
+Cuyos valores numéricos son: L₁ = 12 cm    L₂ = 10.5 cm    L₃ = 10.5 cm    L₄ = 10 cm
 
 Esto a su vez permitió crear el archivo descriptor del robot para que su visualización eventual en entornos como MATLAB, Coppelia y Rviz corresponda al manipulador físico. Los cálculos fueron comparados con las posiciones esperadas, sin embargo, su comprobación final se produce en el control automático.
 
@@ -31,32 +30,38 @@ Esto a su vez permitió crear el archivo descriptor del robot para que su visual
 
 ## Análisis - Cinemática inversa
 
-Una vez obtenida la matriz de transformación homogénea (MTH), se implementa la función invkin en MATLAB. Esta función calcula las posiciones articulares necesarias para que el efector final del robot alcance una posición deseada en el espacio cartesiano \((x, y, z)\). Recibe como entradas las coordenadas cartesianas, las longitudes de los eslabones (\(l_1, l_2, l_3, l_4\)) y el ángulo de alcance (\(\phi\)).
+Una vez obtenida la matriz de transformación homogénea (MTH), se implementa la función invkin en MATLAB. Esta función calcula las posiciones articulares necesarias para que el efector final del robot alcance una posición deseada en el espacio cartesiano (x, y, z). Recibe como entradas las coordenadas cartesianas, las longitudes de los eslabones (L₁, L₂, L₃, L₄) y el ángulo de alcance (φ).
 
 ### Proceso de cálculo
 
 La función utiliza un enfoque geométrico basado en la ley de senos y la ley de cosenos para determinar las posiciones articulares. El proceso se divide en los siguientes pasos:
 
 1. *Ángulo base (q₁):*
+   
 q₁ = rad2deg(atan2(y, x)) - 90°
 
 2. *Posición del efector sin la herramienta:*
+   
 pwx = sqrt(x² + y²) - l₄  cos(φ)  
 pwz = z - l₄  sin(φ) - l₁
 
 3. *Distancia al punto objetivo (r):*
+   
 r = sqrt(pwx² + pwz²)
 
 4. *Ángulo q₃ (Ley de cosenos):*
+   
 D = (r² - l₂² - l₃²) / (2  l₂ l₃)  
 q₃ = rad2deg(atan2(-sqrt(1 - D²), D)) + 90°
 
 5. *Ángulo q₂ (Ley de senos y cosenos):*
+    
 α = atan2(pwz, pwx)  
 β = atan2(l₃ sin(q₃ - 90°), l₂ + l₃  cos(q₃ - 90°))  
 q₂ = rad2deg(α - β) - 90°
 
 6. *Ángulo q₄ (Herramienta):*
+    
 q₄ = φ - q₂ - q₃
 
 7. *Retorno de las posiciones articulares:*
