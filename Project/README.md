@@ -35,55 +35,32 @@ Una vez obtenida la matriz de transformación homogénea (MTH), se implementa la
 
 ### Proceso de cálculo
 
-La función utiliza un enfoque geométrico basado en la *ley de senos* y la *ley de cosenos* para determinar las posiciones articulares. El proceso se divide en los siguientes pasos:
+La función utiliza un enfoque geométrico basado en la ley de senos y la ley de cosenos para determinar las posiciones articulares. El proceso se divide en los siguientes pasos:
 
-1. *Ángulo base (\(q_1\)):*
-   \[
-   q_1 = \text{rad2deg}(\text{atan2}(y, x)) - 90^\circ
-   \]
+1. *Ángulo base (q₁):*
+q₁ = rad2deg(atan2(y, x)) - 90°
 
 2. *Posición del efector sin la herramienta:*
-   \[
-   \text{pwx} = \sqrt{x^2 + y^2} - l_4 \cdot \cos(\phi)
-   \]
-   \[
-   \text{pwz} = z - l_4 \cdot \sin(\phi) - l_1
-   \]
+pwx = sqrt(x² + y²) - l₄  cos(φ)  
+pwz = z - l₄  sin(φ) - l₁
 
-3. *Distancia al punto objetivo (\(r\)):*
-   \[
-   r = \sqrt{\text{pwx}^2 + \text{pwz}^2}
-   \]
+3. *Distancia al punto objetivo (r):*
+r = sqrt(pwx² + pwz²)
 
-4. *Ángulo \(q_3\) (Ley de cosenos):*
-   \[
-   D = \frac{|r^2 - l_2^2 - l_3^2|}{2 \cdot l_2 \cdot l_3}
-   \]
-   \[
-   q_3 = \text{rad2deg}\left(\text{atan2}\left(-\sqrt{1 - D^2}, D\right)\right) + 90^\circ
-   \]
+4. *Ángulo q₃ (Ley de cosenos):*
+D = (r² - l₂² - l₃²) / (2  l₂ l₃)  
+q₃ = rad2deg(atan2(-sqrt(1 - D²), D)) + 90°
 
-5. *Ángulo \(q_2\) (Ley de senos y cosenos):*
-   \[
-   \alpha = \text{atan2}(\text{pwz}, \text{pwx})
-   \]
-   \[
-   \beta = \text{atan2}\left(l_3 \cdot \sin(q_3 - 90^\circ), l_2 + l_3 \cdot \cos(q_3 - 90^\circ)\right)
-   \]
-   \[
-   q_2 = \text{rad2deg}(\alpha - \beta) - 90^\circ
-   \]
+5. *Ángulo q₂ (Ley de senos y cosenos):*
+α = atan2(pwz, pwx)  
+β = atan2(l₃ sin(q₃ - 90°), l₂ + l₃  cos(q₃ - 90°))  
+q₂ = rad2deg(α - β) - 90°
 
-6. *Ángulo \(q_4\) (Herramienta):*
-   \[
-   q_4 = \phi - q_2 - q_3
-   \]
+6. *Ángulo q₄ (Herramienta):*
+q₄ = φ - q₂ - q₃
 
 7. *Retorno de las posiciones articulares:*
-   \[
-   q = [q_1, q_2, q_3, q_4]
-   \]
-
+q = [q₁, q₂, q₃, q₄]
 ### Implementación en MATLAB
 
 ```matlab
