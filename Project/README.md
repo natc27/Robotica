@@ -194,17 +194,17 @@ https://github.com/natc27/Robotica/blob/b8be3305dd338dd3af7b134c311ec667a46c16c8
 
 Se sabe que la conexion se establecio cuando sale un mensaje indicando conexion exitosa.
 
-![pubish](Multimedia/pubish.png)
+![pubish](Multimedia/publish.png)
 
 
 #### DroidCam Listener
 
 Es la contraparte de **DroidCam Publisher**, reproduce el video adquirido. Al igual que **DroidCam Publisher**, este requiere la dependencia **cv_bridge**. El reconstruye el video, haviendo uso de OpenCv en python.
 
-https://github.com/natc27/Robotica/blob/75e1a5654a8e628b7a87d2bc9ba26017bd944631/Project/Phantom_ws/src/droidcam_listener/droidcam_listener/droidcam_listener.py#L19-l26
+https://github.com/natc27/Robotica/blob/75e1a5654a8e628b7a87d2bc9ba26017bd944631/Project/Phantom_ws/src/droidcam_listener/droidcam_listener/droidcam_listener.py#L19-L26
 
 Su correcta activacion se señala con un mensaje. En cuanto a la calidad del video esta es aceptable, pero puede mejor si se usa otro reproductor de video, debido a que OpenCV no es muy optimo y hay ocasiones donde se presenta lag.
-
+![list](Multimedia/list.png)
 ![camera1](Multimedia/camera2.png)
 ![camera2](Multimedia/camera1.png)
 ![camera3](Multimedia/camera3.jpeg)
