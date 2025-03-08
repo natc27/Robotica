@@ -178,9 +178,13 @@ Un aspecto a mejorar para proximas versiones tiene que ver con en **yaml** para 
 
 
 #### DroidCam Publisher
-Es un nodo que con ayuda de la aplicacion **DroidCam** (disponible en PlayStore) puede convertir cualquier smartphone en una camara inhalambrica a la que se puede acceder medinate IP.
+Es un nodo que con ayuda de la aplicacion **DroidCam** (disponible en PlayStore) puede convertir cualquier smartphone en una camara inhalambrica a la que se puede acceder medinate IP. La aplicacion es muy simple de usar, basat con abrirla y ya el smartphones empieza a operar como web. Cabe aclarar que existe una version paga de la app llamada **DroidCamX** que ademas de dar mas psoibilidades de configuracion, da la opcion de operara el smartphone como camara USB. Por practicidad, se hizo uso de la version gratuita. Lo mas importante es verificar que la direccion IP de la camara este en la misma red que el resto hardware. 
 
 ![droidcam](Multimedia/droidcam.png)
+
+En caunto al nod ROS, este requiere la dependencia **cv_bridge** de python paar realizar la conexion, por lo cual es pertinente tener la instalada en el entorno activo de ROS. Ademas de que igual que con **joy_mapper**, se usa un archivo **yaml** para configurar la direccion IP y el numero de fotogramas del video, y optimizar la funcion del nodo.
+
+https://github.com/natc27/Robotica/blob/6620f874eabcf2e7e8dbd53e8d45366211d3b4bb/Project/Phantom_ws/src/droidcam_publisher/droidcam_params.yaml#L1-L2
 
 #### DroidCam Listener
 
