@@ -305,6 +305,8 @@ Este código en MATLAB implementa una solución completa para la simulación y c
 Es un ejemplo práctico de cómo integrar herramientas de robótica, simulación y control en un solo flujo de trabajo.
 
 ---
+## Video de presentación
+Finalmente, debido a limites de capacidad en GitHub, el video se encuentra en el siguiente enlace. [Video de presentación](https://www.canva.com/design/DAGhHEv5X5o/Q0x4AayTWEUl4-38igz9Hw/view?utm_content=DAGhHEv5X5o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h77c65f8d68) En donde se pueden encontrar los videos con los resultados finales de cada uno de los módulos.
 
 ## Requisitos
 - MATLAB con la Robotics Toolbox de Peter Corke.
