@@ -186,12 +186,25 @@ En caunto al nod ROS, este requiere la dependencia **cv_bridge** de python paar 
 
 https://github.com/natc27/Robotica/blob/6620f874eabcf2e7e8dbd53e8d45366211d3b4bb/Project/Phantom_ws/src/droidcam_publisher/droidcam_params.yaml#L1-L2
 
+En cuanto al nodo, este accede a la camara y carga la informacion en formato **bgr8** al tema **droidcam_image** mediante la libreria cv y cv_bridge.
+
+https://github.com/natc27/Robotica/blob/b8be3305dd338dd3af7b134c311ec667a46c16c8/Project/Phantom_ws/src/droidcam_publisher/droidcam_publisher/droidcam_publisher.py#L25-L26
+
+Se sabe que la conexion se establecio cuando sale un mensaje indicando conexion exitosa.
+
+
+
+
 #### DroidCam Listener
 
 ## Diagrama de flujo de las acciones del robot
 
 A continuación, se muestra el diagrama de flujo del funcionamiento general del robot, en donde se colocan las acciones principales del robot, es decir, el modo manual y automático.
 ![flowchart](Multimedia/flowchart.png)
+
+
+
+
 
 ## Autores
 - Oscar Andrés Alvarado.
