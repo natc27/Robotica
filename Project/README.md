@@ -204,7 +204,80 @@ Se sabe que la conexion se establecio cuando sale un mensaje indicando conexion 
 A continuación, se muestra el diagrama de flujo del funcionamiento general del robot, en donde se colocan las acciones principales del robot, es decir, el modo manual y automático.
 ![flowchart](Multimedia/flowchart.png)
 
+# Implementación de modo automático con Matlab
 
+Este proyecto implementa un control completo para el manipulador Phantom Pincher X utilizando MATLAB, la **toolbox de Robótica de Peter Corke y ROS 2. El código .mlx define la cinemática del robot, simula su movimiento y envía comandos a través de ROS 2 para controlar el robot en un entorno real.
+
+---
+
+## Características principales
+
+- Definición de cinemática directa mediante los parámetros Denavit-Hartenberg (DH).
+- Modelado del robot con la Robotics Toolbox de Peter Corke.
+- Interpolación de trayectorias entre waypoints utilizando interpolación esférica.
+- Simulación del movimiento en MATLAB.
+- Control del robot real a través de ROS 2.
+
+---
+
+## Descripción del Código
+
+### 1. Definición de Cinemática
+El código comienza con:
+- Limpieza del entorno de trabajo y definición de variables simbólicas (q1, q2, q3, q4).
+- Parámetros DH que describen la geometría del robot:
+  - Longitudes de los eslabones (l1, l2, l3, l4).
+  - Construcción de las matrices de transformación homogénea entre cada eslabón.
+
+### 2. Modelado del Robot
+- Se usa la toolbox de Peter Corke para modelar cada articulación como un objeto Revolute.
+- Se agrupan en un objeto SerialLink, que representa el robot completo.
+- Se visualiza el robot en una figura y se habilita el modo de enseñanza (robot.teach()).
+
+### 3. Generación de Trayectorias
+- Se definen waypoints (puntos clave por donde debe moverse el robot).
+- Se genera una trayectoria suave con interpolateSphericalTrajectory, que:
+  - Usa interpolación lineal para la posición.
+  - Usa SLERP (interpolación esférica) para la orientación.
+  - Garantiza un movimiento fluido y natural.
+
+### 4. Simulación del Movimiento
+- Para cada punto en la trayectoria:
+  - Se calcula la cinemática inversa con invkin.
+  - Se obtienen los ángulos articulares requeridos.
+  - Se ajustan los valores para compatibilidad con el robot real.
+  - Se simula el movimiento con robot.plot.
+
+### 5. Comunicación con ROS 2
+- Se crea un nodo de ROS 2 en MATLAB.
+- Se configura un publicador para enviar comandos de posición.
+- En un bucle, se envían los comandos al robot real siguiendo la trayectoria.
+- Se incluyen pausas para sincronizar el movimiento y garantizar seguridad.
+
+---
+
+## Funciones Clave
+### invkin()
+- Calcula la cinemática inversa, determinando los **ángulos articulares necesarios para alcanzar una posición y orientación específicas.
+
+### interpolateSphericalTrajectory()
+- Interpola una trayectoria entre waypoints, asegurando un movimiento **suave y continuo.
+
+---
+
+## Conclusión
+Este código en MATLAB implementa una solución completa para la simulación y control del Phantom Pincher X, desde la **definición de la cinemática hasta la ejecución de trayectorias en el robot real con ROS 2.  
+
+Es un ejemplo práctico de cómo integrar herramientas de robótica, simulación y control en un solo flujo de trabajo.
+
+---
+
+## Requisitos
+- MATLAB con la Robotics Toolbox de Peter Corke.
+- ROS 2 configurado en el sistema.
+- Conexión con el Phantom Pincher X.
+
+Para más detalles sobre la configuración y ejecución, consulta la documentación interna del código.
 
 
 
