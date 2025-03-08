@@ -29,11 +29,90 @@ Esto a su vez permitió crear el archivo descriptor del robot para que su visual
 
 ![Visualización en MATLAB](Multimedia/vis-matlab.jpg)
 
-## Análisis - Cinemática inversa.
+## Análisis - Cinemática inversa
 
-Una vez obtenida la matriz de transformación homogénea (MTH) se implementa la función *invkin* en MATLAB, creada para recibir las coordenadas (x,y,z) de una posición deseada, las longitudes de los eslabones, definidas anteriormente, el ángulo de alcance ($\phi$) y el robot para poder realizar la visualización, esta función calcula la distancia del efector final y verifica la alcanzabilidad del mismo, y utilizando el método geométrico (basado en la ley de senos y la ley de cosenos) halla las posiciones articulares en un vector $q=[q_1 q_2 q_3 q_4]$.
-El proceso de obtención de las posiciones articulares se realiza de manera recursiva 
+Una vez obtenida la matriz de transformación homogénea (MTH), se implementa la función invkin en MATLAB. Esta función calcula las posiciones articulares necesarias para que el efector final del robot alcance una posición deseada en el espacio cartesiano \((x, y, z)\). Recibe como entradas las coordenadas cartesianas, las longitudes de los eslabones (\(l_1, l_2, l_3, l_4\)) y el ángulo de alcance (\(\phi\)).
 
+### Proceso de cálculo
+
+La función utiliza un enfoque geométrico basado en la *ley de senos* y la *ley de cosenos* para determinar las posiciones articulares. El proceso se divide en los siguientes pasos:
+
+1. *Ángulo base (\(q_1\)):*
+   \[
+   q_1 = \text{rad2deg}(\text{atan2}(y, x)) - 90^\circ
+   \]
+
+2. *Posición del efector sin la herramienta:*
+   \[
+   \text{pwx} = \sqrt{x^2 + y^2} - l_4 \cdot \cos(\phi)
+   \]
+   \[
+   \text{pwz} = z - l_4 \cdot \sin(\phi) - l_1
+   \]
+
+3. *Distancia al punto objetivo (\(r\)):*
+   \[
+   r = \sqrt{\text{pwx}^2 + \text{pwz}^2}
+   \]
+
+4. *Ángulo \(q_3\) (Ley de cosenos):*
+   \[
+   D = \frac{|r^2 - l_2^2 - l_3^2|}{2 \cdot l_2 \cdot l_3}
+   \]
+   \[
+   q_3 = \text{rad2deg}\left(\text{atan2}\left(-\sqrt{1 - D^2}, D\right)\right) + 90^\circ
+   \]
+
+5. *Ángulo \(q_2\) (Ley de senos y cosenos):*
+   \[
+   \alpha = \text{atan2}(\text{pwz}, \text{pwx})
+   \]
+   \[
+   \beta = \text{atan2}\left(l_3 \cdot \sin(q_3 - 90^\circ), l_2 + l_3 \cdot \cos(q_3 - 90^\circ)\right)
+   \]
+   \[
+   q_2 = \text{rad2deg}(\alpha - \beta) - 90^\circ
+   \]
+
+6. *Ángulo \(q_4\) (Herramienta):*
+   \[
+   q_4 = \phi - q_2 - q_3
+   \]
+
+7. *Retorno de las posiciones articulares:*
+   \[
+   q = [q_1, q_2, q_3, q_4]
+   \]
+
+### Implementación en MATLAB
+
+```matlab
+function q_sim = invkin(x, y, z, l1, l2, l3, l4, phi)
+    % Ángulo base
+    q1 = rad2deg(atan2(y, x)) - 90;
+
+    % Posición del efector sin la herramienta
+    pwx = sqrt(x^2 + y^2) - l4 * cosd(phi);  
+    pwz = z - l4 * sind(phi) - l1;  
+
+    % Distancia al punto objetivo
+    r = sqrt(pwx^2 + pwz^2);
+
+    % Ángulo q3 (Ley de cosenos)
+    D = abs(r^2 - l2^2 - l3^2) / (2 * l2 * l3);
+    q3 = rad2deg(atan2(-sqrt(abs(1 - D^2)), D)) + 90;  
+
+    % Ángulo q2 (Ley de senos y cosenos)
+    alpha = atan2(pwz, pwx);
+    beta = atan2(l3 * sind(q3 - 90), l2 + l3 * cosd(q3 - 90));
+    q2 = rad2deg(alpha - beta) - 90;
+
+    % Ángulo de la herramienta
+    q4 = phi - q2 - q3;
+
+    % Retornar ángulos articulares
+    q_sim = [q1, q2, q3, q4];
+end
 ## Descripción de la solución
 
 La solución fue implementada utilizando ROS2 Humble en Windows, por medio de RoboStack. Previo a la programación, se estudiaron los registros que poseen los servos AX-12A, que son lo utilizados por el robot PincherX-100. Dichos registro se pueden consutal en la tabla de control, que se encuentra en la [página web](https://emanual.robotis.com/docs/en/dxl/ax/ax-12a/#control-table-data-address) del fabricante, y permiten leer y escribir sobre los registros de los dispositivos. Adicionalmente, se utilizó el software Dynamixel Wizard 2, para verificar el estado de los motores.
