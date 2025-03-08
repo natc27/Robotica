@@ -36,7 +36,9 @@ El proceso de obtención de las posiciones articulares se realiza de manera recu
 
 
 
+## Nodos desarrollados en ROS
 
+### Phantom Controller
 
 
 
