@@ -148,7 +148,33 @@ En primera instancia, se verifico no solo la conexion de los botones mediante la
 
 Comproba loa seañles que dispones para operar, hay que cerciorase de que en nuestro entrono de ROS2 este instalado el paqueste ros-humble-joy, ya que este es el que nos permita realizar la conexion directa entre ROS y nuestro mando. Como se puede ver, cualquier nodo de ROS puede acceder al mando de forma directa, pero esto implica 2 problemas: el tamaño de paquete dependera del mando usado y si no se tiene la correcta caracterizacion del mando no se sabe que señales son analogas, digitales, de los joysticks, de los botoens, etc... Por lo que es aconseble crear un nodo que filtre esta informacion cruda para que el resto de nodos en la red ROS no tenga incivenientes.
 
-Hbalando del codigo del nodo. Con el fin de facilitar el proceso de caracterizado y compilacion del nodo, se hace uso de un archivo de configuracion **yaml* para dar no solo mayor adaptabilidad al poder declara
+Hbalando del codigo del nodo. Con el fin de facilitar el proceso de caracterizado y compilacion del nodo, se hace uso de un archivo de configuracion **yaml** para dar  mayor adaptabilidad al poder declarar y permitir que el nodo sea independeniente del hardware del mando.
+
+https://github.com/natc27/Robotica/blob/16925ed3875dbbcfb20b03f7069fddddad7b0491/Project/Phantom_ws/src/joy_mapper/dualshock4_teleop.yaml#L1-L5
+
+Por defecto, este nodo adquiere y filtra los datos de todos los ejes analogos y de 4 botones, de los cuales solo usamos 4 señales analogas y 3 digitales (se dejaron señales libres en caso de ser encesarias). La asignacion de variables que usamos fue la siguiente:
+
+1. Eje x equivalente al movimiento horizontal de stick izquierdo y controla la artiuclacion 1.
+2. Eje y equivalente al movimiento vertical de stick izquierdo y controla la artiuclacion 2.
+3. Eje z equivalente al movimiento horizontal de stick derecho y controla la artiuclacion 3.
+4. Rotacion z equivalente al movimiento vertical de stick derecho y controla la artiuclacion 4.
+5. Boton 2 equivalente al boton **X** y controla el cierre del griper (Articulacion 5).
+6. Boton 3 equivalente al boton **Circulo** y controla la apertura del griper (Articulacion 5).
+7. Boton 10 equivalente al boton **R1** y actua como boton de hombre muerto por seguridad.
+
+Con esta configuracion inicial establecida, realizamos la subcripcion al nodo **Joy** (debe estar activo) para publicar 3 temas: Un arreglo con los datos de los ejes, un arreglo con los datos de los botones y por aparte el boton de hombre muerto.
+
+https://github.com/natc27/Robotica/blob/16925ed3875dbbcfb20b03f7069fddddad7b0491/Project/Phantom_ws/src/joy_mapper/joy_mapper/joy_to_twist.py#L21-L23
+
+Y hay 2 funciones importantes que cumple **joy_mapper**: Primero filtar la señales analogas con un filtro basico.
+
+https://github.com/natc27/Robotica/blob/16925ed3875dbbcfb20b03f7069fddddad7b0491/Project/Phantom_ws/src/joy_mapper/joy_mapper/joy_to_twist.py#L25-L32
+
+Y segundo, permite la publicaion o no del tema **filtered_axes** mediante el valor de **R1**, con el fin de evitar errores causados por el usuario remoto o por drift del los sticks analogos.
+
+https://github.com/natc27/Robotica/blob/16925ed3875dbbcfb20b03f7069fddddad7b0491/Project/Phantom_ws/src/joy_mapper/joy_mapper/joy_to_twist.py#L34-L36
+
+Un aspecto a mejorar para proximas versiones tiene que ver con en **yaml** para quede ademas de permitir configurar la distribucion de botones, permita decidir que señales usar y cuales no dando la mayor soporte de hardware.
 
 #### DroidCam Publisher
 #### DroidCam Listener
