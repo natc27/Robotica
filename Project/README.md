@@ -129,7 +129,10 @@ El nodo joy mapper es un nodo que filtra los contenidos del nodo de lectura Joy.
 
 ![BotonesDualShock4 ](Multimedia/dual4.png)
 
-En primera instancia, se verifico no solo la conexion de los botones
+En primera instancia, se verifico no solo la conexion de los botones mediante la *Consola de Comandos* sino tambien cuantas señales se pueden reconocer del mando.
+
+![Jpycpl ](Multimedia/joycpl.png)
+
 
 #### DroidCam Publisher
 #### DroidCam Listener
