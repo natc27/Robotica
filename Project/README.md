@@ -56,7 +56,9 @@ Es necesario especificar un objeto tipo *PortHandler*, la ID del motor cuyo regi
 ### Phantom Controller
 ### Phantom Kinematics
 ### Joy Mapper
-El nodo joy mapper es un nodo que filtra los contenidos del nodo de lectura Joy.
+El nodo joy mapper es un nodo que filtra los contenidos del nodo de lectura Joy. El desarrollo se enfoco para el uso de un mando de DualShock4 de PlayStation 4, pero es posible adaptarlo para otros controladores que hagan uso de joysticks.
+
+
 ### DroidCam Publisher
 ### DroidCam Listener
 
