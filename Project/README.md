@@ -113,7 +113,9 @@ function q_sim = invkin(x, y, z, l1, l2, l3, l4, phi)
     % Retornar ángulos articulares
     q_sim = [q1, q2, q3, q4];
 end
-## Descripción de la solución
+```
+
+## Descripción de la solución y análisis del código
 
 La solución fue implementada utilizando ROS2 Humble en Windows, por medio de RoboStack. Previo a la programación, se estudiaron los registros que poseen los servos AX-12A, que son lo utilizados por el robot PincherX-100. Dichos registro se pueden consutal en la tabla de control, que se encuentra en la [página web](https://emanual.robotis.com/docs/en/dxl/ax/ax-12a/#control-table-data-address) del fabricante, y permiten leer y escribir sobre los registros de los dispositivos. Adicionalmente, se utilizó el software Dynamixel Wizard 2, para verificar el estado de los motores.
 
@@ -127,8 +129,13 @@ Posteriormente, se utilizan los miembros *openPort*  y *setBaudRate* del objeto 
 
 https://github.com/natc27/Robotica/blob/4102386d516958b52753ce6bb3deca950aa36fa6/Project/Phantom_ws/src/phantom_controller/phantom_controller/phantom_controller.py#L167-L173
 
-Es necesario especificar un objeto tipo *PortHandler*, la ID del motor cuyo registro va a ser accedido y la dirección del registro. En este caso, se debe llamar a la función iterativamente para leer las posiciones de todos los motores y almacenarlas en un arreglo.
+Es necesario especificar un objeto tipo *PortHandler*, la ID del motor cuyo registro va a ser accedido y la dirección del registro. En este caso, se debe llamar a la función iterativamente para leer las posiciones de todos los motores y almacenarlas en un arreglo. Es posible utilizar de manera similar los miembros *read2ByteTxRx* y *read4ByteTxRx* para escribir información en los registros. Sin embargo, para realizar un Sync Write (es decir, escribir información a todos los motores al mismo tiempo) es necesario utilizar objetos de clase *GroupSyncWrite*.
 
+https://github.com/natc27/Robotica/blob/5042ef6418d4194b9bc805ce40402f7f42fe35c4/Project/Phantom_ws/src/phantom_controller/phantom_controller/phantom_controller.py#L87-L89
+
+Posteriormente, se utiliza el miembro *addParam* de la misma clase para añadir la información a ésta. Finalmente, envía la información utilizando el miembro *txPacket* y se limpia el objeto con el miembro *clearParam*.
+
+https://github.com/natc27/Robotica/blob/8fbe2d26b156bf28dd0d25169aa4f19af39d298c/Project/Phantom_ws/src/phantom_controller/phantom_controller/phantom_controller.py#L152-L158
 
 ## Nodos desarrollados en ROS
 
