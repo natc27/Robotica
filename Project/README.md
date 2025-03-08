@@ -224,6 +224,16 @@ Para esto realiamos la cadena de comunicacion:
 Mediante esta cadena de mensajes, se puede controlar el pinhcer usanod un mando, pero se pudo notra cierto lag o movimiento otosco en este modo debido a que Phantom Kinematics calcula el valor de /goal_joint_vel en base a los valores de /filtered_axes y /filtered_buttons, y usa como dato de seguridad /r1_button. Este calculo lo realiza mediante el incremneto dicretos del valor de la posicion articular actual pero esto ocasiona un problema.
 
 
+Bosquejando el comportamiento del incremento del valor de posicion de forma discreta en funcion del tiempo e integrando para obtener la velocidad de la artiuclacion, se visualiza que la velocidad aumenta de forma casi cuadratica por cada nuevo incremento que se realiza. Ahora, se tiene el hecho de que el programa que da los valores articulares en modo manual le da un incremento o decremento de 2 unidades cada vez que envia en paquete de articulaciones, para cambios pequeños no pasa nada pero para cambios grandes es apreciable.
+
+
+
+Si se tiene encuenta que se estableció un limite de velocidad, los mensajes con los incrementos de posicion no corresponde con la velocidades requeridas para alcanzar la configuracion necesaria. Ahora si se suelta el joystick, el bot esta en una posicion articular muy atras de la ultima calculada, y la ultima calculada fue enviada antes de soltar el joystick. Esto ocasiona que el bot ignore todas las configuraciones calculadas y se quede con la actual y la ultima calculada, lo que obliga a un incremento brusco de velocidad con el fin de alcanzar las ultima posicion calculada en el menor tiempo posible.
+
+Por ejemplo, envia el consjunto de posiciones 1,2,3,4,5,6,7,8,9 y 10. Como la velocidad esta limita, el robor apenas va en la posición 2 cuando ya se le envio en calculo de la 6, y cuando se suelta el joystick, el bot esta en la posicion 3 y el ultimo mensaje que recibio fue el de ir a la posicion 10. Entonces que pasa, prioriza llegar de posicon 3 a 10, lo que causa un incremento brusco de velocidad.
+
+Como mejora futura, es acosejable cambiar el control de posicion por control de velocidad debido a que se puede esclar la velocida en funcion de los valores del joystick y dependiendo de la duracion de los instantes de velocida en incremnto o decremnto del valor de posicion se realizara de manera proporcional, lo que da un mejor control y ajuste mas preciso
+
 
 # Implementación de modo automático con Matlab
 
