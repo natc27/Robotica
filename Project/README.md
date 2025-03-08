@@ -226,7 +226,7 @@ Mediante esta cadena de mensajes, se puede controlar el pinhcer usanod un mando,
 
 Bosquejando el comportamiento del incremento del valor de posicion de forma discreta en funcion del tiempo e integrando para obtener la velocidad de la artiuclacion, se visualiza que la velocidad aumenta de forma casi cuadratica por cada nuevo incremento que se realiza. Ahora, se tiene el hecho de que el programa que da los valores articulares en modo manual le da un incremento o decremento de 2 unidades cada vez que envia en paquete de articulaciones, para cambios pequeños no pasa nada pero para cambios grandes es apreciable.
 
-![graf1](Multimedia/graf1.jpeg)
+![graf1](Multimedia/graf3.jpeg)
 
 Si se tiene encuenta que se estableció un limite de velocidad, los mensajes con los incrementos de posicion no corresponde con la velocidades requeridas para alcanzar la configuracion necesaria. Ahora si se suelta el joystick, el bot esta en una posicion articular muy atras de la ultima calculada, y la ultima calculada fue enviada antes de soltar el joystick. Esto ocasiona que el bot ignore todas las configuraciones calculadas y se quede con la actual y la ultima calculada, lo que obliga a un incremento brusco de velocidad con el fin de alcanzar las ultima posicion calculada en el menor tiempo posible.
 
@@ -236,7 +236,7 @@ Por ejemplo, envia el consjunto de posiciones 1,2,3,4,5,6,7,8,9 y 10. Como la ve
 
 Como mejora futura, es acosejable cambiar el control de posicion por control de velocidad debido a que se puede esclar la velocida en funcion de los valores del joystick y dependiendo de la duracion de los instantes de velocida en incremnto o decremnto del valor de posicion se realizara de manera proporcional, lo que da un mejor control y ajuste mas preciso
 
-![graf3](Multimedia/graf3.jpeg)
+![graf3](Multimedia/graf1.jpeg)
 
 # Implementación de modo automático con Matlab
 
