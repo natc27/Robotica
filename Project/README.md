@@ -123,8 +123,6 @@ Posteriormente, se utiliza el miembro *addParam* de la misma clase para añadir 
 https://github.com/natc27/Robotica/blob/8fbe2d26b156bf28dd0d25169aa4f19af39d298c/Project/Phantom_ws/src/phantom_controller/phantom_controller/phantom_controller.py#L152-L158
 
 
-
-#### Phantom Controller
 #### Phantom Kinematics
 #### Joy Mapper
 El nodo joy mapper es un nodo que filtra los contenidos del nodo de lectura Joy. El desarrollo se enfoco para el uso de un mando de DualShock4 de PlayStation 4, pero es posible adaptarlo para otros controladores que hagan uso de joysticks.
