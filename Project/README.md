@@ -179,6 +179,9 @@ Un aspecto a mejorar para proximas versiones tiene que ver con en **yaml** para 
 
 #### DroidCam Publisher
 Es un nodo que con ayuda de la aplicacion **DroidCam** (disponible en PlayStore) puede convertir cualquier smartphone en una camara inhalambrica a la que se puede acceder medinate IP.
+
+![droidcam](Multimedia/droidcam.png)
+
 #### DroidCam Listener
 
 ## Diagrama de flujo de las acciones del robot
