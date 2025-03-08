@@ -179,6 +179,10 @@ Un aspecto a mejorar para proximas versiones tiene que ver con en **yaml** para 
 #### DroidCam Publisher
 #### DroidCam Listener
 
+## Diagrama de flujo de las acciones del robot
+
+A continuación, se muestra el diagrama de flujo del funcionamiento general del robot, en donde se colocan las acciones principales del robot, es decir, el modo manual y automático.
+![flowchart](Multimedia/flowchart.png)
 
 ## Autores
 - Oscar Andrés Alvarado.
