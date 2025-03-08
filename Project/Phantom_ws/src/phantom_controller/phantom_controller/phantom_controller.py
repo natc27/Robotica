@@ -149,6 +149,7 @@ class PhantomController(Node):
         #     goal_vel = goal_vel_arr[i]
         #     dxl_comm_result, dxl_error = self.packetHandler.write2ByteTxRx(self.portHandler, id, ADDR_MX_MOVING_SPEED, goal_vel)
 
+        # fijar posición objetivo
         goal_vel_arr = msg.data
         for i in range(len(DXL_IDS)):
             id = DXL_IDS[i]
