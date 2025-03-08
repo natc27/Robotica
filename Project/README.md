@@ -128,6 +128,8 @@ Adicionalmente se tienen dos publisher, que constantemente publican información
 
 El nodo *phantom_kinematics*, se encarga de enviar mensajes a los nodos */goal_joint_vel* y */goal_joint_vel*, que se encargan de publicar la posición y velocidad objetivos de los servos al nodo *phantom_controller*. Además, éste nodo establece la conexión con el joystick, al recibir las diferentes entradas de cada acción del control. Especificamente se conecta a los nodos */filtered_axes* y */filtered_buttons*, los cuales se utilizan para hacer el control de articulaciones del robot. El control que se realiza es de posición, como se observa en el siguiente bloque de código.
 
+https://github.com/natc27/Robotica/blob/81a930378b3f0d28984576ddfe638583f08f9e86/Project/Phantom_ws/src/phantom_kinematics/phantom_kinematics/phantom_kinematics.py#L56-L60
+
 #### Joy Mapper
 El nodo joy mapper es un nodo que filtra los contenidos del nodo de lectura Joy. El desarrollo se enfoco para el uso de un mando de DualShock4 de PlayStation 4, pero es posible adaptarlo para otros controladores que hagan uso de joysticks. En la imagen aparecen resaltados los joysticks y botones que se usaron.
 
