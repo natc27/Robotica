@@ -129,10 +129,22 @@ El nodo joy mapper es un nodo que filtra los contenidos del nodo de lectura Joy.
 
 ![BotonesDualShock4 ](Multimedia/dual4.png)
 
-En primera instancia, se verifico no solo la conexion de los botones mediante la *Consola de Comandos* sino tambien cuantas señales se pueden reconocer del mando.
+En primera instancia, se verifico no solo la conexion de los botones mediante la *Consola de Comandos* sino tambien cuantas señales se pueden reconocer del mando. Para esto se ejecuta el comando *joy.cpl*, en donde se despliega el menu *Dispositivos de juego*. Si el mando es reconocido debe aparecer listado y en estado activo. Posterior, accedemos al menu de propiedades, en este menu podemos ver 3 secciones:
+
+1. **Ejes**: Referentes a las señales anaologas que puede registrar el mando. En el caso del mando DualShock4, son los datos de los 2 JoySticks analogos y de los gatillos L2 y r2.
+
+2. **Botones**: Refrentes a todas las señales digitales binarias que puede registrar el mando. En el caso del mando DualShock4, hay 14 incluyendo botones ocultos como el de los JoySticks y el de pad tactil.
+
+3. **Control de POV**: Refrente exclusivamente a la cruzeta o pad de deirecciones.
+
+
 
 ![Jpycpl ](Multimedia/joycpl.png)
 
+
+Comproba loa seañles que dispones para operar, hay que cerciorase de que en nuestro entrono de ROS2 este instalado el paqueste ros-humble-joy, ya que este es el que nos permita realizar la conexion directa entre ROS y nuestro mando. Como se puede ver, cualquier nodo de ROS puede acceder al mando de forma directa, pero esto implica 2 problemas: el tamaño de paquete dependera del mando usado y si no se tiene la correcta caracterizacion del mando no se sabe que señales son analogas, digitales, de los joysticks, de los botoens, etc... Por lo que es aconseble crear un nodo que filtre esta informacion cruda para que el resto de nodos en la red ROS no tenga incivenientes.
+
+Hbalando del codigo del nodo. Con el fin de facilitar el proceso de caracterizado y compilacion del nodo, se hace uso de un archivo de configuracion **yaml* para dar no solo mayor adaptabilidad al poder declara
 
 #### DroidCam Publisher
 #### DroidCam Listener
