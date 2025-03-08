@@ -214,8 +214,8 @@ A continuación, se muestra el diagrama de flujo del funcionamiento general del 
 ![flowchart](Multimedia/flowchart.png)
 
 # Implementación de modo manual
+Priemro, se realiza el flujo paralelo DrroidCam a DroidCamPublisher, DroidCamPublisher a DroidCamListener y DroidCamListener a OpenCV. Par tener imagen remota del pincher y conocer de forma visula sus movimientos. Posterior para el control realizamos la cadena de comunicacion:
 
-Para esto realiamos la cadena de comunicacion:
 1. Mando DualShock4 a nodo joy y publica /joy.
 2. Mensaje /joy entra a nodo joy_mapper y publica /filtered_axes, /filtered_buttons y /r1_button.
 3. Mensajes /filtered_axes, /filtered_buttons y /r1_button entran a nodo Phantom Kinematics y publica /goal_joint_vel y /goal_joint_vel
