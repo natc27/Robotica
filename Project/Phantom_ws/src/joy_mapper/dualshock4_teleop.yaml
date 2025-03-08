@@ -1,13 +1,5 @@
-axes:
-  linear_x: 1     # Stick izquierdo vertical
-  linear_y: 0     # Stick izquierdo horizontal (strafe)
-  angular_z: 2    # Stick derecho horizontal
-
-scales:
-  linear_x: 1.0
-  linear_y: 1.0
-  angular_z: 1.0
-
 buttons:
-  turbo: 4  # Por ejemplo, L1 como turbo
-
+  special_1: 0   # Ejemplo: botón Cuadrado
+  special_2: 1   # Ejemplo: botón X
+  special_3: 2   # Ejemplo: botón Círculo
+  enable_send: 10 # R1 - Botón que habilita el envío
