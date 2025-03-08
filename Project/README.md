@@ -205,8 +205,8 @@ https://github.com/natc27/Robotica/blob/75e1a5654a8e628b7a87d2bc9ba26017bd944631
 
 Su correcta activacion se señala con un mensaje. En cuanto a la calidad del video esta es aceptable, pero puede mejor si se usa otro reproductor de video, debido a que OpenCV no es muy optimo y hay ocasiones donde se presenta lag.
 
-![camera1](Multimedia/camera1.png)
-![camera2](Multimedia/camera2.png)
+![camera1](Multimedia/camera2.png)
+![camera2](Multimedia/camera1.png)
 ![camera3](Multimedia/camera3.jpeg)
 ## Diagrama de flujo de las acciones del robot
 
